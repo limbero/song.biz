@@ -1,0 +1,152 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300,700|Roboto+Condensed:100,300,400,600|Montserrat+Alternates:400,700|Mr+De+Haviland|Voltaire|Dancing+Script);
+
+/*BODY*/
+
+body {
+	background: #111 url(skewed_print.png);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    overflow-x: hidden;
+	color: #FFF;
+}
+
+/*PANES*/
+
+#leftpane, #rightpane {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+#leftpane {
+	text-align: center;
+	position: fixed;
+    left: 0;
+	width: 400px;
+	background: #2F2F2F;
+}
+#rightpane {
+	padding-left: 400px;
+	right: 0;
+	left: 0;
+	width: 100%;
+	box-sizing: border-box;
+	display: table;
+	z-index: -1;
+}
+
+/*LEFT PANE CONTENT*/
+
+#logo {
+	margin: 10px auto -10px;
+}
+
+#leftpane h2 {
+	margin: 20px 0 20px 30px;
+	text-align: left;
+	font-family: 'Roboto Condensed';
+	font-weight: 600;
+	font-size: 2em;
+	cursor: pointer;
+	color: #000;
+}
+#leftpane h2 span.arrow {
+	font-size: 0.46875em;
+	position: relative;
+	top: -5px;
+}
+
+#leftpane ul {
+	margin: -20px 0 0;
+	padding-left: 0;
+	width: 100%;
+	text-align: left;
+	font-family: 'Dancing Script';
+	font-size: 2em;
+	font-weight: 400;
+	list-style-type: none;
+}
+#leftpane ul:last-child { padding-bottom: 30px; }
+
+#leftpane ul li {
+	padding: 5px 0 5px 45px;
+	width: 100%;
+	cursor: pointer;
+	box-sizing: border-box;
+	background: #2F2F2F;
+}
+#leftpane ul li.selected { background: #444; }
+
+#leftpane ul li span.price {
+	margin-left: 12px;
+	font-family: 'Roboto Condensed';
+	font-size: 0.7em;
+	color: #111;
+}
+
+/*RIGHT PANE CONTENT*/
+
+#rightpane span.initialmsg {
+	text-align: center;
+	font-family: 'Roboto';
+	font-weight: 100;
+	font-size: 2em;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#floater {
+	display: table-cell;
+	vertical-align: middle;
+	width: 800px;
+}
+
+#rightpane h1 {
+	margin: 40px auto;
+	text-align: center;
+	font-family: 'Voltaire';
+	font-size: 6.875em;
+	font-weight: 700;
+	color: #DDD;
+	text-shadow: 4px 6px 0 #000;
+}
+@media screen and (min-width: 1441px) { #rightpane h1 { font-size: 100px; } }
+@media screen and (max-width: 1440px) and (min-width: 1201px) { #rightpane h1 { font-size: 85px; } }
+@media screen and (max-width: 1200px) { #rightpane h1 { font-size: 80px; } }
+
+#rightpane h3 {
+	margin: -45px auto 40px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #888;
+}
+
+#rightpane table {
+	margin: 40px auto;
+	font-size: 1.75em;
+	border-collapse: separate;
+}
+#rightpane tr:nth-child(even) {
+	background: rgba(0,0,0,0.2);
+}
+#rightpane tr td {
+	padding: 5px 15px;
+	border: 1px solid transparent;
+}
+#rightpane tr td:first-child {
+	padding-left: 40px;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-align: center;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+}
+#rightpane tr td:last-child {
+	padding-right: 40px;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+	color: #999;
+}

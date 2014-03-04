@@ -1,0 +1,1113 @@
+{
+	"categories": [ {
+		"name": "longdrinks",
+	 	"drinks": [ {
+ 			"name": "Avloppsrör",
+ 			"subtitle": "&nbsp;",
+ 			"price": "50:-",
+ 			"ingredients": [ {
+ 				"name": "Baileys",
+ 				"amount": "3 cl"
+ 			}, {
+ 				"name": "Bols blå",
+ 				"amount": "3 cl"
+ 			}, {
+ 				"name": "Coca-Cola",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i Baileys och Bols blå. Fyll sedan med Coca-Cola försiktigt. Skummar:-aftigt."
+ 		}, {
+ 			"name": "Candelia",
+ 			"subtitle": "&nbsp;",
+ 			"price": "40:-",
+ 			"ingredients": [ {
+ 				"name": "Vaniljlikör",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Passõa",
+ 				"amount": "3 cl"
+ 			}, {
+ 				"name": "Tranbärsjuice",
+ 				"amount": ""
+ 			}, {
+ 				"name": "Citronlemonad",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i spriten. Fyll sedan med hälften tranbärsjuice, hälften citronlemonad."
+ 		}, {
+ 			"name": "Comfortable Screwup",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Gin",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Vodka",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Southern Comfort",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Vaniljlikör",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Apelsinjuice",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i spriten. Fyll sedan med apelsinjuice."
+ 		}, {
+ 			"name": "Dead Smile",
+ 			"subtitle": "&nbsp;",
+ 			"price": "80:-",
+ 			"ingredients": [ {
+ 				"name": "Gin",
+ 				"amount": "4 cl"
+ 			}, {
+ 				"name": "Sour Apple",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Arouz Licorice",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Sour Raspberry",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Pressad citron",
+ 				"amount": "1"
+ 			}, {
+ 				"name": "Sprite",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Lollyglas. Häll upp Gin och Sour Apple, pressa i citron. Gör en Dödskalleshot, bomba den försiktigt ner i glaset. Toppa med is och Sprite."
+ 		}, {
+ 			"name": "Going Home",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Absolut Kurant",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Triple Sec",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Tonic",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i spriten. Fyll sedan med tonic."
+ 		}, {
+ 			"name": "Green Goblin",
+ 			"subtitle": "&nbsp;",
+ 			"price": "50:-",
+ 			"ingredients": [ {
+ 				"name": "Ljus rom",
+ 				"amount": "3 cl"
+ 			}, {
+ 				"name": "Bols blå",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Midori",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Lime",
+ 				"amount": "1/2"
+ 			}, {
+ 				"name": "Ananasjuice",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i spriten. Pressa i lime. Fyll sedan med ananasjuice."
+ 		}, {
+ 			"name": "Isbjörn",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Vodka",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Bols blå",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Sprite",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i spriten. Fyll sedan med Sprite."
+ 		}, {
+ 			"name": "Juicy Lucy",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Jägermeister",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Passõa",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Lime",
+ 				"amount": "1/2"
+ 			}, {
+ 				"name": "Tranbärsjuice",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i spriten. Pressa i lime. Fyll sedan med tranbärsjuice."
+ 		}, {
+ 			"name": "Lennart",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Päronlikör",
+ 				"amount": "4 cl"
+ 			}, {
+ 				"name": "Lime",
+ 				"amount": "1/2"
+ 			}, {
+ 				"name": "Sprite",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i spriten. Pressa i lime. Fyll sedan med Sprite."
+ 		}, {
+ 			"name": "Lolly",
+ 			"subtitle": "Vår sektionsdrink",
+ 			"price": "60:-",
+ 			"ingredients": [ {
+ 				"name": "Vodka",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Gin",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Ljus rom",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Tequila",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Triple Sec",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Sockerlag",
+ 				"amount": "1.5 cl"
+ 			}, {
+ 				"name": "Rose's Lime",
+ 				"amount": "1.5 cl"
+ 			}, {
+ 				"name": "Coca-Cola",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Lollyglas. Ta bara lite is. Häll i spriten. Ta det försiktigt med Tequilan, kör helst typ 1.5 cl Tequila och 2.5 cl Triple Sec. Ta Rose's och sockerlag på känn. Fyll med Coca-Cola."
+ 		}, {
+ 			"name": "Lynchburg Lemonade",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Bourbon",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Triple Sec",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Sockerlag",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Pressad citron",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Sprite",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Skaka sprit, sockerlag och pressad citron. Toppa med Sprite."
+ 		}, {
+ 			"name": "Mañana",
+ 			"subtitle": "&nbsp;",
+ 			"price": "50:-",
+ 			"ingredients": [ {
+ 				"name": "Ljus rom",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Passõa",
+ 				"amount": "3 cl"
+ 			}, {
+ 				"name": "Vaniljlikör",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Lime",
+ 				"amount": "1/2"
+ 			}, {
+ 				"name": "Sprite",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i spriten. Pressa i lime. Fyll sedan med Sprite."
+ 		}, {
+ 			"name": "Monkey Passion",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Passõa",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Vodka",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Cointreau",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Apelsinjuice",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i spriten.. Fyll sedan med apelsinjuice."
+ 		}, {
+ 			"name": "Nattsvart",
+ 			"subtitle": "&nbsp;",
+ 			"price": "50:-",
+ 			"ingredients": [ {
+ 				"name": "Vodka",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Cointreau",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Bols blå",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Lime",
+ 				"amount": "1/2"
+ 			}, {
+ 				"name": "Tranbärsjuice",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i spriten. Pressa i lime. Fyll sedan med tranbärsjuice."
+ 		}, {
+ 			"name": "P2",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Vaniljvodka",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Sour Apple",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Lime",
+ 				"amount": "1/2"
+ 			}, {
+ 				"name": "Sprite",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i spriten. Pressa i lime. Fyll sedan med Sprite."
+ 		}, {
+ 			"name": "Piggelin",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Vodka",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Midori",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Sprite",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i spriten. Fyll sedan med Sprite."
+ 		}, {
+ 			"name": "Ragnar",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Absolut Kurant",
+ 				"amount": "4 cl"
+ 			}, {
+ 				"name": "Hackad lime",
+ 				"amount": "1/2"
+ 			}, {
+ 				"name": "Sprite",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i spriten. Hacka limen i ganska små bitar. Fyll sedan med Sprite."
+ 		}, {
+ 			"name": "Simon Habtemikael",
+ 			"subtitle": "En datalogklassiker",
+ 			"price": "40:-",
+ 			"ingredients": [ {
+ 				"name": "Vodka",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Hpnotiq",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Bols blå",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Guanabanajuice",
+ 				"amount": ""
+ 			}, {
+ 				"name": "Sprite",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Somersbyglas. Börja med is. Häll i spriten. Fyll sedan med hälften guanabanajuice och hälften Sprite."
+ 		}, {
+ 			"name": "Solero",
+ 			"subtitle": "(Piñata)",
+ 			"price": "50:-",
+ 			"ingredients": [ {
+ 				"name": "Ljus rom",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Midori",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Malibu",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Passõa",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Passionsfruktjuice",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i spriten. Fyll sedan med passionsfruktjuice."
+ 		}, {
+ 			"name": "Velvet Avalanche",
+ 			"subtitle": "&nbsp;",
+ 			"price": "50:-",
+ 			"ingredients": [ {
+ 				"name": "Vodka",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Fläderlikör",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Sour Raspberry",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Lime",
+ 				"amount": "1/2"
+ 			}, {
+ 				"name": "Sprite",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i spriten. Pressa i lime. Fyll sedan med Sprite."
+ 		} ]
+	}, {
+		"name": "shortdrinks",
+	 	"drinks": [  ]
+	}, {
+		"name": "cocktails",
+	 	"drinks": [ {
+ 			"name": "Cosmopolitan",
+ 			"subtitle": "&nbsp;",
+ 			"price": "40:-",
+ 			"ingredients": [ {
+ 				"name": "Citronvodka",
+ 				"amount": "4 cl"
+ 			}, {
+ 				"name": "Cointreau",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Pressad lime",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Tranbärsjuice",
+ 				"amount": "3 cl"
+ 			} ],
+ 			"instructions": "Cocktailglas. Fyll glaset med is och kallt vatten. Skaka alla ingredienserna med is, töm glaset på vatten, och häll upp. Garnera med lime."
+ 		}, {
+ 			"name": "Daiquiri",
+ 			"subtitle": "&nbsp;",
+ 			"price": "50:-",
+ 			"ingredients": [ {
+ 				"name": "Ljus rom",
+ 				"amount": "6 cl"
+ 			}, {
+ 				"name": "Pressad lime",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Sockerlag",
+ 				"amount": "1 cl"
+ 			} ],
+ 			"instructions": "Cocktailglas. Fyll glaset med is och kallt vatten. Skaka alla ingredienserna med is, töm glaset på vatten, och häll upp. Garnera med lime."
+ 		}, {
+ 			"name": "Grasshopper",
+ 			"subtitle": "&nbsp;",
+ 			"price": "50:-",
+ 			"ingredients": [ {
+ 				"name": "Crème de Menthe",
+ 				"amount": "3 cl"
+ 			}, {
+ 				"name": "Cacao white",
+ 				"amount": "3 cl"
+ 			}, {
+ 				"name": "Mjölk",
+ 				"amount": "3 cl"
+ 			} ],
+ 			"instructions": "Cocktailglas. Fyll glaset med is och kallt vatten. Skaka alla ingredienserna med is, töm glaset på vatten, och häll upp."
+ 		}, {
+ 			"name": "Health potion",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Triple sec",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Sour Raspberry",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Midori",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Grenadine",
+ 				"amount": "0.5 cl"
+ 			}, {
+ 				"name": "Sprite",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Cocktailglas. Hör ihop med Mana Potion. Fyll båda glasen med is och kallt vatten. Skaka spriten med is, töm glaset på vatten, och häll upp spriten. Toppa med Sprite och Grenadine."
+ 		}, {
+ 			"name": "Mana potion",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Minttu",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Bols blå",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Seaman's Shot",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Sprite",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Cocktailglas. Hör ihop med Health Potion. Fyll båda glasen med is och kallt vatten. Skaka spriten med is, töm glaset på vatten, och häll upp spriten. Toppa med Sprite."
+ 		}, {
+ 			"name": "Satans spegel",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Triple Sec",
+ 				"amount": "3 cl"
+ 			}, {
+ 				"name": "Citronvodka",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Pressad lime",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Passionsfruktjuice",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Tranbärsjuice",
+ 				"amount": "2 cl"
+ 			} ],
+ 			"instructions": "Cocktailglas. Fyll glaset med is och kallt vatten. Skaka alla ingredienserna med is, töm glaset på vatten, och häll upp."
+ 		}, {
+ 			"name": "Twister",
+ 			"subtitle": "&nbsp;",
+ 			"price": "50:-",
+ 			"ingredients": [ {
+ 				"name": "Vodka",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Midori",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Peachtree",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Pressad citron",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Ananasjuice",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Grenadine",
+ 				"amount": "0.5 cl"
+ 			} ],
+ 			"instructions": "Cocktailglas. Fyll glaset med is och kallt vatten. Skaka alla ingredienserna utom Grenadine med is, töm glaset på vatten, och häll upp. Droppa i Grenadine för att få fin färg."
+		} ]
+	}, {
+		"name": "shots",
+	 	"drinks": [ {
+ 			"name": "&lt;3",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Genomskinlig sprit",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Röd likör",
+ 				"amount": "2 cl"
+ 			} ],
+ 			"instructions": "Shotglas. Skaka alla ingredienserna med is och häll upp."
+ 		}, {
+ 			"name": "Aborted Fetus",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Peachtree",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Baileys",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Grenadine",
+ 				"amount": "0.5 cl"
+ 			} ],
+ 			"instructions": "Shotglas. Häll i Peachtree. Skikta Baileys ovanpå m.h.a barsked. Droppa i Grenadine långsamt, så att de sjunker en lite bit ner i Peachtreen tillsammans med Baileys."
+ 		}, {
+ 			"name": "After Eight",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Cacao Brown",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Crème de Menthe",
+ 				"amount": "2 cl"
+ 			} ],
+ 			"instructions": "Shotglas. Skikta m.h.a barsked."
+ 		}, {
+ 			"name": "B52",
+ 			"subtitle": "&nbsp;",
+ 			"price": "50:-",
+ 			"ingredients": [ {
+ 				"name": "Kahlúa",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Baileys",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Grand Marnier",
+ 				"amount": "2 cl"
+ 			} ],
+ 			"instructions": "Shotglas. Skikta m.h.a barsked. Kan antändas."
+ 		}, {
+ 			"name": "Baby Guinness",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Kahlúa",
+ 				"amount": "3 cl"
+ 			}, {
+ 				"name": "Baileys",
+ 				"amount": "1 cl"
+ 			} ],
+ 			"instructions": "Shotglas. Skikta Kahlúa, följt av Baileys, följt av Grand Marnier m.h.a barsked."
+ 		}, {
+ 			"name": "Dödskalle",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Arouz Licorice",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Sour Raspberry",
+ 				"amount": "2 cl"
+ 			} ],
+ 			"instructions": "Shotglas. Blanda direkt i glaset. Kan ej skiktas."
+ 		}, {
+ 			"name": "Flatline",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Sambuca",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Tequila",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Tabasco",
+ 				"amount": "0.5 cl"
+ 			} ],
+ 			"instructions": "Shotglas. Skikta Sambuca, följt av Tequila m.h.a barsked. Droppa sedan i Tabasco."
+ 		}, {
+ 			"name": "Portal - Blå",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Bols blå",
+ 				"amount": "4 cl"
+ 			}, {
+ 				"name": "Pressad lime",
+ 				"amount": "2 cl"
+ 			} ],
+ 			"instructions": "Shotglas. Blanda direkt i glaset."
+ 		}, {
+ 			"name": "Portal - Orange",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Tequila",
+ 				"amount": "4 cl"
+ 			}, {
+ 				"name": "Apelsinjuice",
+ 				"amount": "2 cl"
+ 			} ],
+ 			"instructions": "Shotglas. Blanda direkt i glaset."
+ 		}, {
+ 			"name": "XORnelia",
+ 			"subtitle": "&nbsp;",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Xanté",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Cornelia",
+ 				"amount": "2 cl"
+ 			} ],
+ 			"instructions": "Shotglas. Skaka ingredienserna med is och häll upp."
+ 		} ]
+	}, {
+		"name": "classics",
+	 	"drinks": [ {
+ 			"name": "Amaretto Sour",
+ 			"subtitle": "Lowball",
+ 			"price": "50:-",
+ 			"ingredients": [ {
+ 				"name": "Amaretto",
+ 				"amount": "6 cl"
+ 			}, {
+ 				"name": "Pressad citron",
+ 				"amount": "6 cl"
+ 			}, {
+ 				"name": "Sockerlag",
+ 				"amount": "6 cl"
+ 			} ],
+ 			"instructions": "Lowballglas. Fyll med krossad is. Skaka alla ingridienserna tillsammans, häll upp."
+ 		}, {
+ 			"name": "Caipirinha",
+ 			"subtitle": "Lowball",
+ 			"price": "50:-",
+ 			"ingredients": [ {
+ 				"name": "Cachaça",
+ 				"amount": "6 cl"
+ 			}, {
+ 				"name": "Limeklyftor",
+ 				"amount": "4 st"
+ 			}, {
+ 				"name": "Socker",
+ 				"amount": "2 tsk"
+ 			} ],
+ 			"instructions": "Lowballglas. Muddla lime och socker (helst farinsocker). Fyll med krossad is, tillsätt sedan Cachaça."
+ 		}, {
+ 			"name": "Fidel Castro",
+ 			"subtitle": "Highball",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Guldrom",
+ 				"amount": "4 cl"
+ 			}, {
+ 				"name": "Lime",
+ 				"amount": "1/2"
+ 			}, {
+ 				"name": "Ginger ale",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Häll i rom. Pressa i lime. Fyll sedan med Ginger ale."
+ 		}, {
+ 			"name": "Harvey Wallbanger",
+ 			"subtitle": "Highball",
+ 			"price": "50:-",
+ 			"ingredients": [ {
+ 				"name": "Vodka",
+ 				"amount": "4 cl"
+ 			}, {
+ 				"name": "Galliano",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Apelsinjuice",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Skaka Vodka och Apelsinjuice, häll upp i highballglas, toppa med Galliano."
+ 		}, {
+ 			"name": "Moscow Mule",
+ 			"subtitle": "Highball",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Vodka",
+ 				"amount": "4 cl"
+ 			}, {
+ 				"name": "Pressad lime",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Ginger ale",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas (egentligen kopparmugg). Börja med is. Häll i vodka. Pressa i lime. Fyll sedan med Ginger ale (egentligen Ginger beer)."
+ 		}, {
+ 			"name": "Old Fashioned",
+ 			"subtitle": "Lowball",
+ 			"price": "50:-",
+ 			"ingredients": [ {
+ 				"name": "Whiskey",
+ 				"amount": "6 cl"
+ 			}, {
+ 				"name": "Sockerlag",
+ 				"amount": "1.5 cl"
+ 			}, {
+ 				"name": "Bitters",
+ 				"amount": ""
+ 			}, {
+ 				"name": "Citrusskal",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Lowballglas. Börja med att hälla i sockerlagen, följt av 2 skvättar bitters. Ta en stor, tunn skiva från citron/apelsin och lägg i. Pressa den med barskeden tills den mjuknar. Häll i whiskeyn, och rör om några varv. Lägg i några isbitar och rör om lite till."
+ 		}, {
+ 			"name": "Piña Colada",
+ 			"subtitle": "&nbsp;",
+ 			"price": "50:-",
+ 			"ingredients": [ {
+ 				"name": "Ljus rom",
+ 				"amount": "3 cl"
+ 			}, {
+ 				"name": "Malibu",
+ 				"amount": "3 cl"
+ 			}, {
+ 				"name": "Grädde",
+ 				"amount": "1 del"
+ 			}, {
+ 				"name": "Mjölk",
+ 				"amount": "1 del"
+ 			}, {
+ 				"name": "Ananasjuice",
+ 				"amount": "2 delar"
+ 			} ],
+ 			"instructions": "Singapore Sling-glas. Fyll till 80% med krossad is. Ta 3 isbitar i shakern, häll i sprit, och fyll nästan till kanten med mixer. Skaka ordentligt, och häll upp. Garnera med ananasskiva (vilket vi aldrig har)."
+ 		}, {
+ 			"name": "Sex on the Beach",
+ 			"subtitle": "Highball",
+ 			"price": "50:-",
+ 			"ingredients": [ {
+ 				"name": "Vodka",
+ 				"amount": "4 cl"
+ 			}, {
+ 				"name": "Peachtree",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Apelsinjuice",
+ 				"amount": ""
+ 			}, {
+ 				"name": "Tranbärsjuice",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i spriten, toppa med hälften apelsinjuice, hälften tranbärsjuice. Garnera med apelsinskiva."
+ 		}, {
+ 			"name": "Tequila Sunrise",
+ 			"subtitle": "Highball",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Tequila",
+ 				"amount": "4 cl"
+ 			}, {
+ 				"name": "Grenadine",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Apelsinjuice",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i tequila och apelsinjuice. Toppa med Grenadine. Garnera med apelsinskiva."
+ 		}, {
+ 			"name": "White Russian",
+ 			"subtitle": "Highball",
+ 			"price": "50:-",
+ 			"ingredients": [ {
+ 				"name": "Vodka",
+ 				"amount": "4 cl"
+ 			}, {
+ 				"name": "Kahlúa",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Mjölk",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Lowballglas eller highballglas. Serveras med is, kan i övrigt förberedas på många sätt. Mjölk ska egentligen vara grädde."
+ 		} ]
+	}, {
+		"name": "news",
+	 	"drinks": [ {
+ 			"name": "Alabama Thunderpussy",
+ 			"subtitle": "Cocktail",
+ 			"price": "50:-",
+ 			"ingredients": [ {
+ 				"name": "Southern Comfort",
+ 				"amount": "4 cl"
+ 			}, {
+ 				"name": "Amaretto",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Apelsinjuice",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Ananasjuice",
+ 				"amount": "2 cl"
+ 			} ],
+ 			"instructions": "Cocktailglas. Fyll glaset med is och kallt vatten. Skaka alla ingredienserna utom Grenadine med is, töm glaset på vatten, och häll upp. Droppa i Grenadine för att få fin färg."
+ 		}, {
+ 			"name": "Apple Got Stuck",
+ 			"subtitle": "In the lawnmower - Highball",
+ 			"price": "50:-",
+ 			"ingredients": [ {
+ 				"name": "St. Germain",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Sour Apple",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Galliano",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Pressad lime",
+ 				"amount": "1/2"
+ 			}, {
+ 				"name": "Sprite",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i spriten. Pressa i lime. Toppa med Sprite."
+ 		}, {
+ 			"name": "Elder Pleasure",
+ 			"subtitle": "Highball",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Agwa",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "St. Germain",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Pressad lime",
+ 				"amount": "1"
+ 			}, {
+ 				"name": "Sprite",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i spriten. Pressa i lime. Toppa med Sprite."
+ 		}, {
+ 			"name": "Froorlroum",
+ 			"subtitle": "Highball",
+ 			"price": "40:-",
+ 			"ingredients": [ {
+ 				"name": "Vodka",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Bols Watermelon",
+ 				"amount": "3 cl"
+ 			}, {
+ 				"name": "Lime",
+ 				"amount": "1/2"
+ 			}, {
+ 				"name": "Sprite",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i spriten. Pressa i lime. Toppa med Sprite."
+ 		}, {
+ 			"name": "Högmod",
+ 			"subtitle": "Cocktail",
+ 			"price": "50:-",
+ 			"ingredients": [ {
+ 				"name": "Vaniljvodka",
+ 				"amount": "4 cl"
+ 			}, {
+ 				"name": "Sour Apple",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Pressad lime",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Tranbärsjuice",
+ 				"amount": "2 cl"
+ 			} ],
+ 			"instructions": "Cocktailglas. Fyll glaset med is och kallt vatten. Skaka alla ingredienserna med is, töm glaset på vatten, och häll upp."
+ 		}, {
+ 			"name": "John Daly",
+ 			"subtitle": "Alkoholiserad golfare - Highball",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Bourbon",
+ 				"amount": "4 cl"
+ 			}, {
+ 				"name": "Lemonade",
+ 				"amount": ""
+ 			}, {
+ 				"name": "Iste",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Somersbyglas. Ha is i glaset. Gör lemonade genom att blanda 1 del pressad citron, 1 del sockerlag, 2 delar vatten, och skaka. Häll i bourbon i glaset. Häll i iste. Häll i lemonade."
+ 		}, {
+ 			"name": "Magic Princess Fairy Dust",
+ 			"subtitle": "Highball",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Absolut Kurant",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Sour Raspberry",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Cornelia",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Grenadine",
+ 				"amount": "0.5 cl"
+ 			}, {
+ 				"name": "Mjölk",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Fyll glaset med is. Skaka ingredienserna med is och häll upp. Toppa med Grenadine, så det blir fint!"
+ 		}, {
+ 			"name": "Mandela from the Block",
+ 			"subtitle": "Highball",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "Vaniljvodka",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Amaretto",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Ananasjuice",
+ 				"amount": ""
+ 			}, {
+ 				"name": "Mjölk",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Fyll glaset med is. Skaka ingredienserna med is och häll upp."
+ 		}, {
+ 			"name": "Sexlekar",
+ 			"subtitle": "Lowball",
+ 			"price": "35:-",
+ 			"ingredients": [ {
+ 				"name": "St. Germain",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Vodka",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Lime",
+ 				"amount": "1/2"
+ 			}, {
+ 				"name": "Jordgubbspuré",
+ 				"amount": "3 cl"
+ 			} ],
+ 			"instructions": "Lowballglas. Börja med is. Häll i spriten. Pressa i lime. Toppa med jordgubbspuré och rör om med barsked. Garnera med mynta."
+ 		}, {
+ 			"name": "Veg alt.",
+ 			"subtitle": "Highball",
+ 			"price": "40:-",
+ 			"ingredients": [ {
+ 				"name": "Oddka Grass",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Vodka",
+ 				"amount": "3 cl"
+ 			}, {
+ 				"name": "Lime",
+ 				"amount": "1/2"
+ 			}, {
+ 				"name": "Ginger ale",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i spriten. Pressa i lime. Fyll med Ginger ale. Garnera med gurkskivor."
+ 		}, {
+ 			"name": "White Persian",
+ 			"subtitle": "Highball",
+ 			"price": "40:-",
+ 			"ingredients": [ {
+ 				"name": "Vodka",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Galliano",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Frangelico",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Kahlúa",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Mjölk",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Skaka alla ingredienserna tillsammans och häll upp."
+ 		} ]
+	}, {
+		"name": "nonalcoholic",
+	 	"drinks": [ {
+ 			"name": "Arnold Palmer",
+ 			"subtitle": "Professionell golfare - Highball",
+ 			"price": "20:-",
+ 			"ingredients": [ {
+ 				"name": "Lemonade",
+ 				"amount": ""
+ 			}, {
+ 				"name": "Iste",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Somersbyglas. Ha is i glaset. Gör lemonade genom att blanda 1 del pressad citron, 1 del sockerlag, 2 delar vatten, och skaka. Häll i iste. Häll i lemonade."
+ 		}, {
+ 			"name": "Cinderella",
+ 			"subtitle": "Cocktail",
+ 			"price": "20:-",
+ 			"ingredients": [ {
+ 				"name": "Pressad citron",
+ 				"amount": "3 cl"
+ 			}, {
+ 				"name": "Apelsinjuice",
+ 				"amount": "3 cl"
+ 			}, {
+ 				"name": "Ananasjuice",
+ 				"amount": "3 cl"
+ 			}, {
+ 				"name": "Ginger ale",
+ 				"amount": ""
+ 			}, {
+ 				"name": "Grenadine",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Cocktailglas. Fyll glaset med is och kallt vatten. Skaka juicerna med is, töm glaset på vatten, och häll upp. Toppa med Ginger ale och Grenadine."
+ 		}, {
+ 			"name": "Lemon, Lime and Bitters",
+ 			"subtitle": "Lowball",
+ 			"price": "20:-",
+ 			"ingredients": [ {
+ 				"name": "Rose's Lime",
+ 				"amount": "1 cl"
+ 			}, {
+ 				"name": "Lemonade",
+ 				"amount": ""
+ 			}, {
+ 				"name": "Bitters",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Lowballglas. Ha is i glaset. Gör lemonade genom att blanda 1 del pressad citron, 1 del sockerlag, 2 delar vatten, och skaka. Ha i några skvättar bitters i glaset, följt av Rose's Lime och lemonade."
+ 		}, {
+ 			"name": "Piñita Colada",
+ 			"subtitle": "&nbsp;",
+ 			"price": "20:-",
+ 			"ingredients": [ {
+ 				"name": "Kokosmjölk",
+ 				"amount": "1 del"
+ 			}, {
+ 				"name": "Grädde",
+ 				"amount": "1 del"
+ 			}, {
+ 				"name": "Mjölk",
+ 				"amount": "1 del"
+ 			}, {
+ 				"name": "Ananasjuice",
+ 				"amount": "3 delar"
+ 			} ],
+ 			"instructions": "Singapore Sling-glas. Fyll till 80% med krossad is. Ta 3 isbitar i shakern, fyll nästan till kanten. Skaka ordentligt, och häll upp. Garnera med ananasskiva (vilket vi aldrig har)."
+ 		}, {
+ 			"name": "Shirley Temple",
+ 			"subtitle": "Highball",
+ 			"price": "20:-",
+ 			"ingredients": [ {
+ 				"name": "Grenadine",
+ 				"amount": "2 cl"
+ 			}, {
+ 				"name": "Ginger ale",
+ 				"amount": ""
+ 			} ],
+ 			"instructions": "Highballglas. Börja med is. Häll i Ginger ale. Ha i Grenadine. Garnera med lime."
+ 		} ]
+	} ]
+}
