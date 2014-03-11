@@ -8,7 +8,7 @@ $(document).ready(function () {
 	$('#news').toggle();
 	$('#nonalcoholic').toggle();
 
-	$.getJSON( "drinks.json", function( data ) {
+	$.getJSON( "./resources/songs.json", function( data ) {
 		console.log(data);
 		globdata = data;
 		var i = 0;
