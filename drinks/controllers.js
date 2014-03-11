@@ -1,76 +1,4 @@
 $(document).ready(function () {
-	globdata = '';
-	$('#longdrinks').toggle();
-	$('#shortdrinks').toggle();
-	$('#cocktails').toggle();
-	$('#shots').toggle();
-	$('#classics').toggle();
-	$('#news').toggle();
-	$('#nonalcoholic').toggle();
-
-	$.getJSON( "drinks.json", function( data ) {
-		console.log(data);
-		globdata = data;
-		var i = 0;
-		while(data.categories[i] != null) {
-			var cur = data.categories[i];
-			console.log(cur.name);
-
-			if(cur.name === "longdrinks") {
-				var j = 0;
-				while(cur.drinks[j] != null) {
-					$('#longdrinks').append("<li>"+cur.drinks[j].name+"<span class=\"price\">"+cur.drinks[j].price+"</span></li>");
-					j++;
-				}
-			}
-			/*else if(cur.name === "shortdrinks") {
-				var j = 0;
-				while(cur.drinks[j] != null) {
-					$('#shortdrinks').append("<li>"+cur.drinks[j].name+"</li>");
-					j++;
-				}
-			}*/
-			else if(cur.name === "cocktails") {
-				var j = 0;
-				while(cur.drinks[j] != null) {
-					$('#cocktails').append("<li>"+cur.drinks[j].name+"<span class=\"price\">"+cur.drinks[j].price+"</span></li>");
-					j++;
-				}
-			}
-			else if(cur.name === "shots") {
-				var j = 0;
-				while(cur.drinks[j] != null) {
-					$('#shots').append("<li>"+cur.drinks[j].name+"<span class=\"price\">"+cur.drinks[j].price+"</span></li>");
-					j++;
-				}
-			}
-			else if(cur.name === "classics") {
-				var j = 0;
-				while(cur.drinks[j] != null) {
-					$('#classics').append("<li>"+cur.drinks[j].name+"<span class=\"price\">"+cur.drinks[j].price+"</span></li>");
-					j++;
-				}
-			}
-			else if(cur.name === "news") {
-				var j = 0;
-				while(cur.drinks[j] != null) {
-					$('#news').append("<li>"+cur.drinks[j].name+"<span class=\"price\">"+cur.drinks[j].price+"</span></li>");
-					j++;
-				}
-			}
-			else if(cur.name === "nonalcoholic") {
-				var j = 0;
-				while(cur.drinks[j] != null) {
-					$('#nonalcoholic').append("<li>"+cur.drinks[j].name+"<span class=\"price\">"+cur.drinks[j].price+"</span></li>");
-					j++;
-				}
-			}
-			i++;
-		}
-	});
-
-    //.clone().children().remove().end().text()
-
 	$('#longdrinkh2').click(function () {
 		$('#longdrinks').toggle();
 		if($('#longdrinkh2 .arrow').html() === "▼") {
@@ -160,35 +88,7 @@ $(document).ready(function () {
 
 		$('#rightpane').html(rightpane);
 	});
-
-	/*$('#shortdrinks').on('click', 'li', function () {
-		console.log($(this).html());
-		$('li').removeClass('selected');
-		$(this).addClass('selected');
-
-		var rightpane = "<div id=\"floater\"><h1>"+$(this).html()+"</h1>"+"<table><tbody>";
-
-		var i = 0;
-
-		var cur = globdata.categories[1];
-
-		while(cur.drinks[i].name != $(this).html() && cur.drinks[i] != null) {
-			i++;
-		}
-		var curdrink = cur.drinks[i];
-		console.log(curdrink);
-
-		i = 0;
-		while(curdrink.ingredients[i] != null) {
-			rightpane += "<tr><td>"+curdrink.ingredients[i].amount+"</td><td>"+curdrink.ingredients[i].name+"</td></tr>";
-			i++;
-		}
-
-		rightpane += "</tbody></table></div>";
-
-		$('#rightpane').html(rightpane);
-	});*/
-
+	
 	$('#cocktails').on('click', 'li', function () {
 		console.log($(this).html());
 		$('li').removeClass('selected');
