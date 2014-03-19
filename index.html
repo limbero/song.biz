@@ -2,40 +2,37 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="resources/favicon.ico">
-    <title>Drinkar | DKM</title>
-    <link href="resources/normalize.css" rel="stylesheet" type="text/css" media="screen" />
-    <link href="resources/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <link rel="icon" type="image/png" href="resources/note.jpg">
+    <title>SÅNGBOK</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 
 </head>
 <!-- MAIN VIEW -->
 <body>
-    <div id="leftpane">
-        <!-- <img id="logo" src="drinklista.png" width="150"> -->
-        <h2 id="longdrinkh2">LONG DRINKS <span class="arrow">►</span></h2>
-        <ul id="longdrinks">
-        </ul>
-        <h2 id="cocktailh2">COCKTAILS <span class="arrow">►</span></h2>
-        <ul id="cocktails">
-        </ul>
-        <h2 id="shoth2">SHOTS <span class="arrow">►</span></h2>
-        <ul id="shots">
-        </ul>
-        <h2 id="classich2">CLASSICS <span class="arrow">►</span></h2>
-        <ul id="classics">
-        </ul>
-        <h2 id="newh2">NEWS <span class="arrow">►</span></h2>
-        <ul id="news">
-        </ul>
-        <h2 id="nonalcoholich2">NON-ALCOHOLIC <span class="arrow">►</span></h2>
-        <ul id="nonalcoholic">
-        </ul>
+
+    <!-- Left pane -->
+    <div id="leftpane" class="container col-md-3" style="background-color: #c7ffde">
+        <ul style="list-style-type:none; text-align: right">
+            <li><button id="searchBtn" class="btn btn-default" style="margin-bottom: 4px; background-color: #ffb3ae; color: #b25c56;">Search</button></li> <!--float: right-->
+            <li><button id="browseBtn" class="btn btn-default" style="margin-bottom: 4px; background-color: #68b287; color: #c7ffde;">Browse</button></li>
+            <li><h5 style="color: #ffb3ae;">User</h4></li> <!--text-align: right-->
+            <li><h4 style="color: #b25c56; text-transform: uppercase">Username</h4></li>
+         </ul>
     </div>
-    <div id="rightpane"><span class="initialmsg">Välj en kategori och en drink till vänster</span></div>
+
+    <!-- Middle pane -->
+    <div id="midpane" class="container col-md-6" style="background-color: #ffb3ae">
+        <span class="initialmsg">Välj en kategori och en drink till vänster</span></div>
+
+    <!-- Right pane -->
+    <div id="rightpane" class="container col-md-3" style="background-color: #c7ffde">
+
+    </div>
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="scripts/model.js"></script>
-<!--     // <script src="scripts/views.js"></script>
-    // <script src="scripts/controllers.js"></script> -->
+
 </body>
 </html>
