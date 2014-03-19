@@ -29,7 +29,7 @@
                         <input id="searchField" type="text">
                     </div>
                     <div id="selectSearchArea">
-                        <form>
+                        <form id="searchtype">
                             <input type="radio" name="type" id="songs" value="songs" checked><label for="songs">SONGS</label> | 
                             <input type="radio" name="type" id="users" value="users"><label for="users">USERS</label> | 
                             <input type="radio" name="type" id="collections" value="collections"><label for="collections">COLLECTIONS</label>

@@ -208,9 +208,10 @@ createTestData();
 // This should not be used in the final version.
 function createTestData(){
 
+	model.addSong("Du gamla, du fria", "Du gamla, Du fria, Du fjällhöga nord<br>Du tysta, Du glädjerika sköna!<br>Jag hälsar Dig, vänaste land uppå jord,<br>Din sol, Din himmel, Dina ängder gröna,<br>Din sol, Din himmel, Dina ängder gröna.<br><br>Du tronar på minnen från fornstora dar,<br>då ärat Ditt namn flög över jorden.<br>Jag vet att Du är och Du blir vad du var.<br>Ja, jag vill leva jag vill dö i Norden,<br>Ja, jag vill leva jag vill dö i Norden.", "Nationalsången", "Kungen?", "NationalAnthems");
+	model.workingCollection.setName("epic collection");
 	model.addSong("Min Titel", "Du gamla du fria du smällfeta ko", "nationalsången", "Mattias", "SexySongs");
 	model.addSong("Tvåan", "My wiener takes it all", "The winner takes it all", "Henrik på S", "SexySongs");
-	model.workingCollection.setName("epic collection");
 	model.workingCollection.addSong(model.songs[1]);
 	model.workingCollection.addSong(model.songs[0]);
 	model.addCollection();

@@ -13,6 +13,9 @@ $(document).ready(function () {
 		searchfilter = $('#searchField').val().toLowerCase();
 		getSearchResults();
 	});
+	$('#searchtype').change(function () {
+		getSearchResults();
+	});
 });
 
 function swapMiddleView(type) {

@@ -159,14 +159,27 @@ hr {
 }
 
 /*MIDDLE LEFT*/
+#b1 {
+	height: 500px;
+}
+
 /*MIDDLE MIDDLE*/
 #b2 {
 	background: #FFB3AE;
 
-	overflow-x: hidden;
-	overflow-y: scroll;
-
 	vertical-align: top;
+
+	height: 500px;
+	padding: 30px 0;
+	box-sizing: border-box;
+}
+
+#searchresults {
+	width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
 }
 
 .card {
@@ -176,19 +189,54 @@ hr {
 	margin: 20px auto;
 
 	width: 90%;
-	padding: 15px 30px;
+	padding: 15px 45px;
+	border-radius: 2px;
 
 	box-sizing: border-box;
+	position: relative;
+
+	text-align: center;
 }
 
 .card h1 {
 	font-weight: 300;
 	color: #555;
+	text-align: left;
+
+	width: 70%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	margin-top: 0;
+}
+.card h2 {
+	font-weight: 500;
+	color: #999;
 	text-align: center;
+
+	font-size: 1em;
+
+	margin-top: 5px;
+}
+.card p {
+	font-weight: 300;
+	margin: 15px auto 30px;
+	display: inline-block;
+	text-align: left;
+}
+.card .more {
+	display: none;
+}
+.card .tag {
+	position: absolute;
 }
 
 /*MIDDLE RIGHT*/
 /*BOTTOM LEFT*/
+#c1 {
+	height: 100px;
+}
 /*BOTTOM MIDDLE*/
 #c2 {
 	background: #FFB3AE;
