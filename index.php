@@ -80,6 +80,7 @@
     </table>
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
     <script src="scripts/model.js"></script>
     <script src="scripts/controllers.js"></script>
     <script src="scripts/views.js"></script>
