@@ -1,14 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,300,500,700|Roboto+Condensed:300,400,600);
 
-/*
-FÄRGER
-
-ljusröd: #FFB3AE;
-mörkröd: #B25C56;
-
-ljusgrön: #C7ffDE;
-*/
-
 body {
 	font-family: 'Roboto';
 
@@ -40,10 +31,28 @@ table#page td {
 
 hr {
 	height: 1px;
-	margin: 10px 20px 0;
+	margin: 10px 10px 0;
 
 	background: #B25C56;
 	border: none;
+}
+
+.semilight {
+	font-weight: 300;
+}
+.semibold {
+	font-weight: 500;
+}
+
+.lightred {
+	color: #FFB3AE;
+}
+.darkred {
+	color: #B25C56;
+}
+
+.lightgreen {
+	color: #C7ffDE;
 }
 
 /*TOP LEFT*/
@@ -84,14 +93,11 @@ hr {
 	font-weight: 300;
 }
 #user {
-	color: #FFB3AE;
 	font-size: 1.15em;
 }
 #user_thing {
 	font-family: 'Roboto Condensed';
 	font-size: 1em;
-	font-weight: 300;
-	color: #B25C56;
 }
 
 /*TOP MIDDLE*/
@@ -138,11 +144,18 @@ hr {
 	font-weight: 500;
 }
 
+#a2 hr {
+	background: #777;
+}
+
 /*TOP RIGHT*/
 #a3 {
 	width: 300px;
 
 	vertical-align: bottom;
+}
+#curcol, #current_collection {
+	margin-left: 10px;
 }
 
 /*MIDDLE LEFT*/
