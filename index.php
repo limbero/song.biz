@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="resources/style.css">
 
+    <?php echo 'bahjs'; ?>
 </head>
 <!-- MAIN VIEW -->
 <body style="height: 100%">
-
     <!-- Left pane -->
     <div id="leftpane" class="container col-md-3" style="background-color: #c7ffde; height: 100%">
         <div id="upperLeft" style="border-bottom: solid #b25c56; border-bottom-width: 1px">
