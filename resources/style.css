@@ -259,6 +259,9 @@ hr {
 .ui-draggable-helper h1 {
 	font-size: 1em;
 }
+.ui-draggable-helper h2, .ui-draggable-helper p {
+	display: none;
+}
 
 /*MIDDLE RIGHT*/
 /*BOTTOM LEFT*/
