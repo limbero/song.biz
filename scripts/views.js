@@ -18,11 +18,19 @@ function getSearchResults() {
 			}
 		}
 		$('.card').click(function () {
-			$('.more', this).slideToggle(200);
+			$('.more', this).slideToggle(100);
 		});
 	}
 	else if(searchtype==='users'){
-		$('#searchresults').append('User search isn\'t implemented yet :(');
+		var roof = model.users.length;
+		for(var i=0; i<roof; i++) {
+			if(model.users[i].getFirstname().toLowerCase().indexOf(searchfilter) != -1 || model.users[i].getSurname().toLowerCase().indexOf(searchfilter) != -1 || model.users[i].getUsername().toLowerCase().indexOf(searchfilter) != -1) {
+				$('#searchresults').append('<div class="card"><h1>'+model.users[i].getFirstname()+' '+model.users[i].getSurname()+'</h1><div class="more"><h2>'+model.users[i].getUsername()+'</h2></div></div>');
+			}
+		}
+		$('.card').click(function () {
+			$('.more', this).slideToggle(100);
+		});
 	}
 	else if(searchtype==='collections'){
 		$('#searchresults').append('Collection search isn\'t implemented yet :(');
