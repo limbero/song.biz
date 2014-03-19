@@ -8,7 +8,7 @@ function getSearchResults() {
 	$('#searchresults').html('');
 
 	var searchtype = $('input[name=type]:checked', '#searchtype').val();
-	console.log(searchtype);
+	console.log(model.users);
 
 	if(searchtype==='songs'){
 		var roof = model.songs.length;
