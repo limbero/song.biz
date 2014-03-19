@@ -28,7 +28,7 @@
                     <div id="searchFieldArea" class="search">
                         <input id="searchField" type="text">
                     </div>
-                    <div id="selectSearchArea">
+                    <div id="selectSearchArea" class="search">
                         <form id="searchtype">
                             <input type="radio" name="type" id="songs" value="songs" checked><label for="songs">SONGS</label> | 
                             <input type="radio" name="type" id="users" value="users"><label for="users">USERS</label> | 
@@ -65,7 +65,7 @@
             <tr>
                 <!-- BOTTOM LEFT -->
                 <td id="c1">
-
+                    <hr>
                 </td>
                 <!-- BOTTOM MIDDLE -->
                 <td id="c2">
@@ -73,7 +73,7 @@
                 </td>
                 <!-- BOTTOM RIGHT -->
                 <td id="c3">
-
+                    <hr>
                 </td>
             </tr>
         </tbody>
