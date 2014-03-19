@@ -215,25 +215,25 @@ function createTestData(){
 	model.workingCollection.addSong(model.songs[0]);
 	model.addCollection();
 	
-	console.log("Song 2 is: " + model.songs[1].getTitle());
+	/*console.log("Song 2 is: " + model.songs[1].getTitle());
 	console.log("The lyrics of Song 1 is: " + model.songs[0].getLyrics());
 	console.log("Length of Collection 1 is: " + model.collections[0].getSongs().length);
-	console.log("This should be 0 and is: " + model.workingCollection.getSongs.length);
+	console.log("This should be 0 and is: " + model.workingCollection.getSongs.length);*/
 
 	var songs = model.collections[0].getSongs();
 
-console.log("");
+/*console.log("");
 	console.log("Info om alla sånger som finns i den collectionen som skapats: ");
-console.log("");
+console.log("");*/
 
 	for (var i = songs.length - 1; i >= 0; i--) {
 		var song = songs[i];
-		console.log("Song Title: " + song.getTitle());
+		/*console.log("Song Title: " + song.getTitle());
 		console.log("Song Lyrics: " + song.getLyrics());
 		console.log("Song Melody: " + song.getMelody());
 		console.log("Song Composer: " + song.getComposer());
 		console.log("Song Type: " + song.getType());
-		console.log("");
+		console.log("");*/
 	};
 
 

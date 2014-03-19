@@ -51,6 +51,6 @@
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="scripts/model.js"></script>
-
+    <script src="scripts/controllers.js"></script>
 </body>
 </html>
