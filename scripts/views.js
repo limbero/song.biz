@@ -17,6 +17,9 @@ function getSearchResults() {
 				$('#searchresults').append('<div class="card"><h1>'+model.songs[i].getTitle()+'</h1><div class="more"><h2>Kompositör: '+model.songs[i].getComposer()+'<br> Melodi: '+model.songs[i].getMelody()+'</h2><p>'+model.songs[i].getLyrics()+'</p></div></div>');
 			}
 		}
+		$('.card').click(function () {
+			$('.more', this).toggle();
+		});
 	}
 	else if(searchtype==='users'){
 		$('#searchresults').append('User search isn\'t implemented yet :(');
