@@ -2,23 +2,23 @@
 	"songs": [ {
 		"songid": 1,
 		"title": "Happy Birthday",
-		"lyrics": "Låttexten här",
+		"lyrics": "You know it doesn't make much sense<br>There ought to be a law against<br>Anyone who takes offense<br>At a day in your celebration<br>'Cause we all know in our minds<br>That there ought to be a time<br>That we can set aside<br>To show just how much we love you<br>And I'm sure you would agree<br>It couldn't fit more perfectly<br>Than to have a world party on the day you came to be<br>Happy birthday to you<br>Happy birthday to you<br>Happy birthday <br>Happy birthday to you<br>Happy birthday to you<br>Happy birthday",
 		"melody": "Happy Birthday",
 		"composer": "Stevie Wonder",
 		"type": "Party"
 	}, {
 		"songid": 2,
-		"title": "Song 2",
-		"lyrics": "Lyrics for song 2",
-		"melody": "Melody for song 2",
-		"composer": "Composer for song 2",
-		"type": "Party"
+		"title": "Ett Svin På Maskin",
+		"lyrics": "Jag skulle ut och festa,<br>stämningen var god.<br>Då träffa jag en killle<br>som var spikrak som ett lod.<br>Ett svin, ett svin, ett svin<br>ifrån maskin.<br><br>Jag hade inte tid<br>att va¹ barmhärtig samarit.<br>Jag lät honom ligga <br>i sin egen skit.<br>Ett svin, ett svin, ett svin<br>ifrån maskin.<br><br>Ett svin, ett svin, ett svin ifrån maskin.<br>Ett svin, ett svin, ett svin ifrån maskin.<br><br>Jag kom ner på Gasquen,<br>gissa vad jag såg.<br>Bland sina egna spyor <br>på golvet där låg.<br>Ett svin, ett svin, ett svin<br>ifrån maskin.<br><br>En sådan jävla skithög<br>vill ingen bjuda opp.<br>Man vill helst springa bort<br>eller ge honom en propp.<br>Ett svin, ett svin, ett svin<br>ifrån maskin.<br><br>Ett svin, ett svin, ett svin ifrån maskin.<br>Ett svin, ett svin, ett svin ifrån maskin.",
+		"melody": "Från Oss Alla Till Er Alla",
+		"composer": "Datalog",
+		"type": "Student"
 	}, {
 		"songid": 3,
 		"title": "Song 3",
-		"lyrics": "Lyrics for song 3",
-		"melody": "Melody for song 3",
-		"composer": "Composer for song 3",
+		"lyrics": "Jag skall festa, ta det lugnt med spriten<br>ha det roligt utan att va' full.<br>Inte krypa runt med festeliten,<br>ta det varligt för min egen skull.<br><br>Först en öl i torra strupen,<br>efter det så kommer supen,<br>i med vinet, ner med punschen<br>sist en groggbuffé.<br><br>Jag är skitfull, däckar först av alla<br>missar festen, men vad gör väl dé?<br>Blandar hejdlöst öl och gammal filmjölk,<br>kastar upp på bordsdamen brevé!",
+		"melody": "Bamse",
+		"composer": "D-LTH, sångarstriden -87",
 		"type": "Party"
 	}, {
 		"songid": 4,
