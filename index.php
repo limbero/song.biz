@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="resources/style.css">
 
-    <?php echo 'bahjs'; ?>
+    <?php echo '<!--bahjs-->'; ?>
 </head>
 <!-- MAIN VIEW -->
 <body style="height: 100%">
