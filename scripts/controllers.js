@@ -12,6 +12,7 @@ $(document).ready(function () {
 	$('#searchField').keyup(function () {
 		searchfilter = $('#searchField').val().toLowerCase();
 		getSearchResults();
+		//$('.card').click(function () {});
 	});
 	$('#searchtype').change(function () {
 		getSearchResults();
