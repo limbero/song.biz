@@ -8,6 +8,11 @@ $(document).ready(function () {
 	});
 
 	$('#searchBtn').click();
+
+	$('#searchField').keyup(function () {
+		searchfilter = $('#searchField').val().toLowerCase();
+		getSearchResults();
+	});
 });
 
 function swapMiddleView(type) {
@@ -22,6 +27,7 @@ function swapMiddleView(type) {
 	else if(type === 'browse') {
 		$('.browse').show();
 		$('.search').hide();
+
 		$('#a2').css('background', '#68B287');
 		$('#b2').css('background', '#68B287');
 		$('#c2').css('background', '#68B287');

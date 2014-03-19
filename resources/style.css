@@ -162,6 +162,29 @@ hr {
 /*MIDDLE MIDDLE*/
 #b2 {
 	background: #FFB3AE;
+
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	vertical-align: top;
+}
+
+.card {
+	background: #FFF;
+	border-bottom: 3px solid #CCC;
+
+	margin: 20px auto;
+
+	width: 90%;
+	padding: 15px 30px;
+
+	box-sizing: border-box;
+}
+
+.card h1 {
+	font-weight: 300;
+	color: #555;
+	text-align: center;
 }
 
 /*MIDDLE RIGHT*/

@@ -25,17 +25,15 @@
                 </td>
                 <!-- TOP MIDDLE -->
                 <td id="a2">
-                    <div class="search">
-                        <div id="searchFieldArea">
-                            <input id="searchField" type="text">
-                        </div>
-                        <div id="selectSearchArea">
-                            <form>
-                                <input type="radio" name="type" id="songs" value="songs" checked><label for="songs">SONGS</label> | 
-                                <input type="radio" name="type" id="users" value="users"><label for="users">USERS</label> | 
-                                <input type="radio" name="type" id="collections" value="collections"><label for="collections">COLLECTIONS</label>
-                            </form>
-                        </div>
+                    <div id="searchFieldArea" class="search">
+                        <input id="searchField" type="text">
+                    </div>
+                    <div id="selectSearchArea">
+                        <form>
+                            <input type="radio" name="type" id="songs" value="songs" checked><label for="songs">SONGS</label> | 
+                            <input type="radio" name="type" id="users" value="users"><label for="users">USERS</label> | 
+                            <input type="radio" name="type" id="collections" value="collections"><label for="collections">COLLECTIONS</label>
+                        </form>
                     </div>
                     <hr>
                 </td>
@@ -53,14 +51,10 @@
                 </td>
                 <!-- MIDDLE MIDDLE -->
                 <td id="b2">
-                    <div class="search">
-                        <div id="searchresults">
-                        </div>
+                    <div id="searchresults" class="search">
                     </div>
-                    <div class="browse">
-                        <div id="browse" style="display:none;" class="row">
-                            browse lol
-                        </div>
+                    <div id="browse" class="browse" style="display:none;" class="row">
+                        browse lol
                     </div>
                 </td>
                 <!-- MIDDLE RIGHT -->
@@ -88,5 +82,6 @@
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="scripts/model.js"></script>
     <script src="scripts/controllers.js"></script>
+    <script src="scripts/views.js"></script>
 </body>
 </html>
