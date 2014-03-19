@@ -1,6 +1,5 @@
 $(document).ready(function () {
 	searchfilter="";
-	console.log(model.songs);
 	setTimeout(getSearchResults, 200);
 });
 
@@ -8,7 +7,6 @@ function getSearchResults() {
 	$('#searchresults').html('');
 
 	var searchtype = $('input[name=type]:checked', '#searchtype').val();
-	console.log(model.users);
 
 	if(searchtype==='songs'){
 		var roof = model.songs.length;
@@ -27,10 +25,19 @@ function getSearchResults() {
 		}
 	}
 	else if(searchtype==='collections'){
-		$('#searchresults').append('Collection search isn\'t implemented yet :(');
+		var roof = model.collections.length;
+		for(var i=0; i<roof; i++) {
+			if(model.collections[i].getName().toLowerCase().indexOf(searchfilter) != -1) {
+				$('#searchresults').append('<div class="card collection ui-widget-content"><h1>'+model.collections[i].getName()+'</h1></div>');
+			}
+		}
 	}
 	$('.card.song').draggable({ revert: true, helper: "clone", start: function(e, ui) { $(ui.helper).addClass("ui-draggable-helper"); } });
 	$('.card.song').draggable("option", "cursorAt", { left: 5 });
+
+	$('.card.collection').draggable({ revert: true, helper: "clone", start: function(e, ui) { $(ui.helper).addClass("ui-draggable-helper"); } });
+	$('.card.collection').draggable("option", "cursorAt", { left: 5 });
+
 	$('.card').click(function () {
 		$('.more', this).slideToggle(100);
 	});
