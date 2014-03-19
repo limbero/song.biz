@@ -1,4 +1,7 @@
 <?php
+echo "<br>";
+echo phpversion();
+
 $dbhandle = sqlite_open('songbiz.db', 0666, $error);
 if (!$dbhandle) die ($error);
 
