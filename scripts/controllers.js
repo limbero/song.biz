@@ -6,6 +6,8 @@ $(document).ready(function () {
 	$('#browseBtn').click(function () {
 		createMiddleView('browse');
 	});
+
+	$('#searchBtn').click();
 });
 
 function createMiddleView(type) {
