@@ -1,19 +1,120 @@
-/*PANES*/
-#leftpane {
-	z-index: 4;
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300,500,700|Roboto+Condensed:300,400,600);
+
+body {
+	font-family: 'Roboto';
+
+	display: table-cell;
+	overflow: hidden;
+
+	background: #C7ffDE;
 }
-#midpane {
-	z-index: 5;
+
+table#page {
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+
+    border-spacing: 0;
+    border-collapse: collapse;
 }
-#rightpane {
-	z-index: 3;
+
+table#page td {
+	overflow: hidden;
+}
+
+/*GENERAL PURPOSE*/
+
+hr {
+	height: 1px;
+	margin: 10px 10px 0;
+
+	background: #B25C56;
+	border: none;
+}
+
+.semilight {
+	font-weight: 300;
+}
+.semibold {
+	font-weight: 500;
+}
+
+.lightred {
+	color: #FFB3AE;
+}
+.darkred {
+	color: #B25C56;
+}
+
+.lightgreen {
+	color: #C7ffDE;
+}
+
+/*TOP LEFT*/
+#a1 {
+	text-align: right;
+	width: 300px;
+	height: 200px;
+	vertical-align: bottom;
+}
+
+#searchBtn, #browseBtn {
+	margin-right: -10px;
+
+	text-transform: uppercase;
+	border: none;
+	outline: none;
+
+	cursor: pointer;
+
+	padding: 10px 20px;
+
+	font-size: 0.75em;
+}
+#searchBtn {
+	background: #ffb3ae;
+	color: #b25c56;
+
+	margin-bottom: 10px;
+}
+#browseBtn {
+	background: #68b287;
+	color: #c7ffde;
+}
+
+#user, #user_thing {
+	margin-right: 10px;
+
+	font-weight: 300;
+}
+#user {
+	font-size: 1.15em;
+}
+#user_thing {
+	font-family: 'Roboto Condensed';
+	font-size: 1em;
+}
+
+/*TOP MIDDLE*/
+#a2 {
+	background: #FFB3AE;
+
+	vertical-align: bottom;
 }
 
 #searchFieldArea {
-	height: 150px;
-	padding: 50px 0;
+	height: 120px;
+	padding: 20px 0;
 	text-align: center;
+
+	box-sizing: border-box;
 }
+
 #searchField {
 	width: 80%;
 	height: 40px;
@@ -26,6 +127,121 @@
 	text-align: center;
 	font-size: 20px;
 }
+
 #selectSearchArea {
 	text-align: center;
+	color: #B25C56;
+	font-size: 1.25em;
 }
+#selectSearchArea input[type="radio"] {
+	display: none;
+}
+#selectSearchArea input[type="radio"] + label {
+	cursor: pointer;
+	font-weight: 300;
+}
+#selectSearchArea input[type="radio"]:checked + label {
+	font-weight: 500;
+}
+
+#a2 hr {
+	background: #777;
+}
+
+/*TOP RIGHT*/
+#a3 {
+	width: 300px;
+
+	vertical-align: bottom;
+}
+#curcol, #current_collection {
+	margin-left: 10px;
+}
+
+/*MIDDLE LEFT*/
+/*MIDDLE MIDDLE*/
+#b2 {
+	background: #FFB3AE;
+
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	vertical-align: top;
+}
+
+.card {
+	background: #FFF;
+	border-bottom: 3px solid #CCC;
+
+	margin: 20px auto;
+
+	width: 90%;
+	padding: 15px 30px;
+
+	box-sizing: border-box;
+}
+
+.card h1 {
+	font-weight: 300;
+	color: #555;
+	text-align: center;
+}
+
+/*MIDDLE RIGHT*/
+/*BOTTOM LEFT*/
+/*BOTTOM MIDDLE*/
+#c2 {
+	background: #FFB3AE;
+}
+
+/*BOTTOM RIGHT*/
+
+/*PANES*/
+#leftpane {
+	z-index: 4;
+
+	background: #c7ffde;
+	height: 100%;
+	width: 300px;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+
+	overflow-x: hidden;
+}
+#midpane {
+	z-index: 2;
+
+	background: #FFB3AE;
+	padding: 0 300px;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+#rightpane {
+	z-index: 3;
+
+	background: #C7FFDE;
+	width: 300px;
+
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+
+	overflow-x: hidden; 
+}
+
+/*LEFT PANE*/
+
+#leftpane button {
+	
+}
+
+
+/*MIDDLE PANE*/

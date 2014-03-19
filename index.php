@@ -6,68 +6,82 @@
     <title>SÅNGBOK</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="resources/style.css">
 
     <?php echo '<!--bahjs-->'; ?>
 </head>
 <!-- MAIN VIEW -->
-<body style="height: 100%">
-    <!-- Left pane -->
-    <div id="leftpane" class="container col-md-3" style="background-color: #c7ffde; height: 100%">
-        <div id="upperLeft" style="border-bottom: solid #b25c56; border-bottom-width: 1px">
-            
-                <div class="row" style="text-align: right"><button id="searchBtn" class="btn btn-default" style="margin-bottom: 4px; background-color: #ffb3ae; color: #b25c56;">Search</button></div> <!--float: right-->
-                <div class="row" style="text-align: right"><button id="browseBtn" class="btn btn-default" style="margin-bottom: 4px; background-color: #68b287; color: #c7ffde;">Browse</button></div>
-                <div class="row" style="text-align: right"><h5 style="color: #ffb3ae; margin-bottom: 0px; margin-right: 15px">User</h5></div> <!--text-align: right-->
-                <div class="row" style="text-align: right"><h4 style="color: #b25c56; text-transform: uppercase; margin-top: 1px; margin-right: 15px">Username</h4></div>
-        </div>
-        <div id="middleLeft">
+<body>
+    <table id="page">
+        <tbody>
+            <tr>
+                <!-- TOP LEFT -->
+                <td id="a1">
+                    <button id="searchBtn">SEARCH</button><br>
+                    <button id="browseBtn">BROWSE</button><br><br>
+                    <span class="semibold lightred" id="user">Jesper Bratt</span><br>
+                    <span class="semilight darkred" id="user_thing">MEGA POWER</span>
+                    <hr>
+                </td>
+                <!-- TOP MIDDLE -->
+                <td id="a2">
+                    <div id="searchFieldArea" class="search">
+                        <input id="searchField" type="text">
+                    </div>
+                    <div id="selectSearchArea">
+                        <form>
+                            <input type="radio" name="type" id="songs" value="songs" checked><label for="songs">SONGS</label> | 
+                            <input type="radio" name="type" id="users" value="users"><label for="users">USERS</label> | 
+                            <input type="radio" name="type" id="collections" value="collections"><label for="collections">COLLECTIONS</label>
+                        </form>
+                    </div>
+                    <hr>
+                </td>
+                <!-- TOP RIGHT -->
+                <td id="a3">
+                    <span id="curcol" class="semibold lightred">Current collection</span><br>
+                    <span id="current_collection" class="semilight darkred">AWESOME SONGS OF LOVE</span>
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <!-- MIDDLE LEFT -->
+                <td id="b1">
 
-        </div>
-        <div id="lowerLeft" style="text-align: center; border-top: solid #b25c56; border-top-width: 1px">
-            <button type="button" class="btn btn-default" style="background-color: #c7ffde; color: #ffb3ae; border: none !important; float: center"> <span class="glyphicon glyphicon-plus"></span></button>
-        </div>
-    </div>
+                </td>
+                <!-- MIDDLE MIDDLE -->
+                <td id="b2">
+                    <div id="searchresults" class="search">
+                    </div>
+                    <div id="browse" class="browse" style="display:none;" class="row">
+                        browse lol
+                    </div>
+                </td>
+                <!-- MIDDLE RIGHT -->
+                <td id="b3">
 
-    <!-- Middle pane -->
-    <div id="midpane" class="container col-md-6" style="background-color: #ffb3ae; height: 100%">
-        <div id="search" class="row">
-            <div id="searchFieldArea">
-                <input id="searchField" type="text">
-            </div>
-            <div id="selectSearchArea">
-                <form>
-                    <input type="radio" name="type" id="songs" value="songs"><label for="songs">Songs</label>
-                    <input type="radio" name="type" id="users" value="users"><label for="users">Users</label>
-                    <input type="radio" name="type" id="collections" value="collections"><label for="collections">Collections</label>
-                </form>
-            </div>
-            <div id="searchresults">
-            </div>
-        </div>
-        <div id="browse" style="display:none;" class="row">
-            browse lol
-        </div>
-    </div>
+                </td>
+            </tr>
+            <tr>
+                <!-- BOTTOM LEFT -->
+                <td id="c1">
 
-    <!-- Right pane -->
-    <div id="rightpane" class="container col-md-3" style="background-color: #c7ffde; height: 100%">
-        <div id="upperRight" style="border-bottom: solid #b25c56; border-bottom-width: 1px">
-            <h5 style="color: #ffb3ae;">Current collection</h4>
-            <h4 style="color: #b25c56; text-transform: uppercase"><span id="currentColl"></span></h4>
-        </div>
+                </td>
+                <!-- BOTTOM MIDDLE -->
+                <td id="c2">
 
-        <div id="lowerRight" style="text-align: center; border-top: solid #b25c56; border-top-width: 1px">
+                </td>
+                <!-- BOTTOM RIGHT -->
+                <td id="c3">
 
-            <span class="glyphicon glyphicon-trash" style="color: #ffb3ae"></span>
-
-        </div>
-
-    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="scripts/model.js"></script>
     <script src="scripts/controllers.js"></script>
+    <script src="scripts/views.js"></script>
 </body>
 </html>
