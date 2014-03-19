@@ -15,17 +15,16 @@
     <!-- Left pane -->
     <div id="leftpane" class="container col-md-3" style="background-color: #c7ffde; height: 100%">
         <div id="upperLeft" style="border-bottom: solid #b25c56; border-bottom-width: 1px">
-            <ul style="list-style-type:none; text-align: right">
-                <li><button id="searchBtn" class="btn btn-default" style="margin-bottom: 4px; background-color: #ffb3ae; color: #b25c56;">Search</button></li> <!--float: right-->
-                <li><button id="browseBtn" class="btn btn-default" style="margin-bottom: 4px; background-color: #68b287; color: #c7ffde;">Browse</button></li>
-                <li><h5 style="color: #ffb3ae;">User</h4></li> <!--text-align: right-->
-                <li><h4 style="color: #b25c56; text-transform: uppercase">Username</h4></li>
-            </ul>
+            
+                <div class="row" style="text-align: right"><button id="searchBtn" class="btn btn-default" style="margin-bottom: 4px; background-color: #ffb3ae; color: #b25c56;">Search</button></div> <!--float: right-->
+                <div class="row" style="text-align: right"><button id="browseBtn" class="btn btn-default" style="margin-bottom: 4px; background-color: #68b287; color: #c7ffde;">Browse</button></div>
+                <div class="row" style="text-align: right"><h5 style="color: #ffb3ae; margin-bottom: 0px; margin-right: 15px">User</h5></div> <!--text-align: right-->
+                <div class="row" style="text-align: right"><h4 style="color: #b25c56; text-transform: uppercase; margin-top: 1px; margin-right: 15px">Username</h4></div>
         </div>
-        <div id="middleLeft" style="border-bottom: solid #b25c56; border-bottom-width: 1px">
+        <div id="middleLeft">
 
         </div>
-        <div id="lowerLeft" style="text-align: center">
+        <div id="lowerLeft" style="text-align: center; border-top: solid #b25c56; border-top-width: 1px">
             <button type="button" class="btn btn-default" style="background-color: #c7ffde; color: #ffb3ae; border: none !important; float: center"> <span class="glyphicon glyphicon-plus"></span></button>
         </div>
     </div>
@@ -41,7 +40,7 @@
             <h4 style="color: #b25c56; text-transform: uppercase"><span id="currentColl"></span></h4>
         </div>
 
-        <div id="lowerRight" style="text-align: center">
+        <div id="lowerRight" style="text-align: center; border-top: solid #b25c56; border-top-width: 1px">
 
             <span class="glyphicon glyphicon-trash" style="color: #ffb3ae"></span>
 
