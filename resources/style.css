@@ -27,6 +27,10 @@ body {
     left: 0;
 	width: 400px;
 	background: #2F2F2F;
+	z-index: 4;
+}
+#midpane {
+	z-index: 5;
 }
 #rightpane {
 	padding-left: 400px;
@@ -35,7 +39,7 @@ body {
 	width: 100%;
 	box-sizing: border-box;
 	display: table;
-	z-index: -1;
+	z-index: 3;
 }
 
 /*LEFT PANE CONTENT*/
