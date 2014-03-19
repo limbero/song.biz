@@ -274,6 +274,7 @@ createTestData();
 // This should not be used in the final version.
 function createTestData(){
 	model.workingCollection.setName("epic collection");
+	
 	$.getJSON( "./db/songs.json", function( songs ) {
 		console.log(songs);
 		var i = 0;
@@ -281,32 +282,10 @@ function createTestData(){
 		while(songs.songs[i] != null) {
 			var song = songs.songs[i];
 			model.addSong(song.title, song.lyrics, song.melody, song.composer, song.type);
-			console.log(song.title, song.lyrics, song.melody, song.composer, song.type);
 			i++;
 		}
-		/*
-		while(data.categories[i] != null) {
-			var cur = data.categories[i];
-			console.log(cur.name);
-
-			if(cur.name === "longdrinks") {
-				var j = 0;
-				while(cur.drinks[j] != null) {
-					$('#longdrinks').append("<li>"+cur.drinks[j].name+"<span class=\"price\">"+cur.drinks[j].price+"</span></li>");
-					j++;
-				}
-			}
-			else if(cur.name === "shortdrinks") {
-				var j = 0;
-				while(cur.drinks[j] != null) {
-					$('#shortdrinks').append("<li>"+cur.drinks[j].name+"</li>");
-					j++;
-				}
-			}
-			i++;
-		}
-		*/
 	});
+
 	model.addSong("Du gamla, du fria", "Du gamla, Du fria, Du fjällhöga nord<br>Du tysta, Du glädjerika sköna!<br>Jag hälsar Dig, vänaste land uppå jord,<br>Din sol, Din himmel, Dina ängder gröna,<br>Din sol, Din himmel, Dina ängder gröna.<br><br>Du tronar på minnen från fornstora dar,<br>då ärat Ditt namn flög över jorden.<br>Jag vet att Du är och Du blir vad du var.<br>Ja, jag vill leva jag vill dö i Norden,<br>Ja, jag vill leva jag vill dö i Norden.", "Nationalsången", "Kungen?", "NationalAnthems");
 	model.addSong("Min Titel", "Du gamla du fria du smällfeta ko", "nationalsången", "Mattias", "SexySongs");
 	model.addSong("Tvåan", "My wiener takes it all", "The winner takes it all", "Henrik på S", "SexySongs");
@@ -321,9 +300,9 @@ function createTestData(){
 
 	var songs = model.collections[0].getSongs();
 
-/*console.log("");
+	/*console.log("");
 	console.log("Info om alla sånger som finns i den collectionen som skapats: ");
-console.log("");*/
+	console.log("");*/
 
 	for (var i = songs.length - 1; i >= 0; i--) {
 		var song = songs[i];
