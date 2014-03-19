@@ -136,6 +136,61 @@ function Collection(name, songs, creator, isPublic) {
 
 }
 
+/***************************************
+Users
+***************************************/
+
+//This is the User constructor
+//If you want to create a new collection call
+// var user = new User("Username", "Firstname", "Surname", "2014-03-14", "Password")
+function User(username, firstname, surname, joined, password) {
+
+	var _username = username; //String
+	var _firstname = firstname; //String
+	var _surname = surname; //String
+	var _joined = joined; //timestamp
+	var _password = password; // String (so secure)
+
+	this.setUsername = function(username){
+		_username = username;
+		model.notifyObservers();
+	}
+
+	this.getUsername = function(){
+		return _username;
+	}
+
+	this.setFirstname = function(firstname){
+		_firstname = firstname;
+		model.notifyObservers();
+	}
+
+	this.getFirstname = function(){
+		return _firstname;
+	}
+
+	this.setSurname = function(surname){
+		_surname = surname;
+		model.notifyObservers();
+	}
+
+	this.getSurname = function(){
+		return _surname;
+	}
+
+	this.joined = function(){
+		return _joined;
+	}
+
+	this.setPassword = function(password){
+		_password = password;
+		model.notifyObservers;
+	}
+
+	this.getPassword = function(){
+		return _password;
+	}
+}
 
 /***************************************
 Model
@@ -148,6 +203,7 @@ Model
 function Model() {
 	this.songs = [];
 	this.collections = [];
+	this.users = [];
 	this.workingCollection = new Collection("", [], "", false);
 
 	this.addSong = function (title, lyrics, melody, composer, type){
@@ -162,7 +218,7 @@ function Model() {
 		if(melody){
 			_melody = melody;
 		}else{
-			melody = "okänd";
+			_melody = "okänd";
 		}
 		if(composer){
 			_composer = composer;
@@ -174,11 +230,11 @@ function Model() {
 		this.notifyObservers();
 	}
 
-	this.addCollection = function (){
-		if(!this.workingCollection.getName()){
+	this.addCollection = function () {
+		if(!this.workingCollection.getName()) {
 			return;
 		}
-		if(!this.workingCollection.getSongs()){
+		if(!this.workingCollection.getSongs()) {
 			return;
 		}
 		this.collections.push(this.workingCollection);
@@ -186,7 +242,17 @@ function Model() {
 		this.notifyObservers();
 	}
 
-		//*** OBSERVABLE PATTERN ***
+	this.addUser = function (username, firstname, surname, password) {
+		if(!username || !firstname || !surname || !password) { // all fields are required for users.
+			return;
+		}
+		var now = new Date();
+		var newuser = new User(username, firstname, surname, now, password);
+		this.users.push(newuser);
+		this.notifyObservers;
+	}
+
+	//*** OBSERVABLE PATTERN ***
 	var listeners = [];
 	
 	this.notifyObservers = function (args) {
@@ -208,8 +274,45 @@ createTestData();
 // This should not be used in the final version.
 function createTestData(){
 
+<<<<<<< HEAD
 	model.addSong("Du gamla, du fria", "Du gamla, Du fria, Du fjällhöga nord<br>Du tysta, Du glädjerika sköna!<br>Jag hälsar Dig, vänaste land uppå jord,<br>Din sol, Din himmel, Dina ängder gröna,<br>Din sol, Din himmel, Dina ängder gröna.<br><br>Du tronar på minnen från fornstora dar,<br>då ärat Ditt namn flög över jorden.<br>Jag vet att Du är och Du blir vad du var.<br>Ja, jag vill leva jag vill dö i Norden,<br>Ja, jag vill leva jag vill dö i Norden.", "Nationalsången", "Kungen?", "NationalAnthems");
 	model.workingCollection.setName("epic collection");
+=======
+	$.getJSON( "./db/songs.json", function( songs ) {
+		console.log(songs);
+		var i = 0;
+
+		while(songs.songs[i] != null) {
+			var song = songs.songs[i];
+			model.addSong(song.title, song.lyrics, song.melody, song.composer, song.type);
+			console.log(song.title, song.lyrics, song.melody, song.composer, song.type);
+			i++;
+		}
+		/*
+		while(data.categories[i] != null) {
+			var cur = data.categories[i];
+			console.log(cur.name);
+
+			if(cur.name === "longdrinks") {
+				var j = 0;
+				while(cur.drinks[j] != null) {
+					$('#longdrinks').append("<li>"+cur.drinks[j].name+"<span class=\"price\">"+cur.drinks[j].price+"</span></li>");
+					j++;
+				}
+			}
+			else if(cur.name === "shortdrinks") {
+				var j = 0;
+				while(cur.drinks[j] != null) {
+					$('#shortdrinks').append("<li>"+cur.drinks[j].name+"</li>");
+					j++;
+				}
+			}
+			i++;
+		}
+		*/
+	});
+
+>>>>>>> FETCH_HEAD
 	model.addSong("Min Titel", "Du gamla du fria du smällfeta ko", "nationalsången", "Mattias", "SexySongs");
 	model.addSong("Tvåan", "My wiener takes it all", "The winner takes it all", "Henrik på S", "SexySongs");
 	model.workingCollection.addSong(model.songs[1]);
