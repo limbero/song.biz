@@ -23,7 +23,7 @@ echo "Database Users created successfully";
 
 // create the collections table
 $collectionstm = "CREATE TABLE Collections(
-	collectionid integer NOT NULL PRIMARY KEY,
+	collectionid integer AUTO_INCREMENT NOT NULL PRIMARY KEY,
     songid integer NOT NULL PRIMARY KEY, 
     title text,
     subtitle text,
