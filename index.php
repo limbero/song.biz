@@ -37,11 +37,11 @@
                 <input id="searchField" type="text">
             </div>
             <div id="selectSearchArea">
-                <select>
-                    <option value="songs">Songs</option>
-                    <option value="users">Users</option>
-                    <option value="collections">Collections</option>
-                </select>
+                <form>
+                    <input type="radio" name="type" id="songs" value="songs"><label for="songs">Songs</label>
+                    <input type="radio" name="type" id="users" value="users"><label for="users">Users</label>
+                    <input type="radio" name="type" id="collections" value="collections"><label for="collections">Collections</label>
+                </form>
             </div>
             <div id="searchresults">
             </div>
