@@ -1,0 +1,12 @@
+{
+	"uclinks": [ {
+		"userid": 1,
+		"collectionid": 1
+	}, {
+		"userid": 1,
+		"collectionid": 2
+	}, {
+		"userid": 2,
+		"collectionid": 2
+	} ]
+}

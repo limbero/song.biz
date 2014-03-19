@@ -1,0 +1,15 @@
+{
+	"cslinks": [ {
+		"collectionid": 1,
+		"songid": 1
+	}, {
+		"collectionid": 1,
+		"songid": 2
+	}, {
+		"collectionid": 1,
+		"songid": 4
+	}, {
+		"collectionid": 2,
+		"songid": 4
+	} ]
+}

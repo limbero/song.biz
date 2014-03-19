@@ -1,0 +1,38 @@
+{
+	"users": [ {
+		"userid": 1,
+		"username": "bratzie",
+		"firstname": "Jesper",
+		"surname": "Bratt",
+		"registered": "Today",
+		"password": "123456"
+	}, {
+		"userid": 2,
+		"username": "limbero",
+		"firstname": "Axel",
+		"surname": "Samuelsson",
+		"registered": "Today",
+		"password": "123456"
+	}, {
+		"userid": 3,
+		"username": "särah",
+		"firstname": "Sarah",
+		"surname": "Bernelind",
+		"registered": "Today",
+		"password": "123456"
+	}, {
+		"userid": 4,
+		"username": "Joszie",
+		"firstname": "Josefin",
+		"surname": "Agerblad",
+		"registered": "Today",
+		"password": "123456"
+	}, {
+		"userid": 5,
+		"username": "matfol",
+		"firstname": "Mattias",
+		"surname": "Folke",
+		"registered": "Today",
+		"password": "123456"
+	} ]
+}
