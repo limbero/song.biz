@@ -11,5 +11,23 @@
 	}, {
 		"collectionid": 2,
 		"songid": 4
+	}, {
+		"collectionid": 2,
+		"songid": 5
+	}, {
+		"collectionid": 2,
+		"songid": 6
+	}, {
+		"collectionid": 3,
+		"songid": 1
+	}, {
+		"collectionid": 3,
+		"songid": 2
+	}, {
+		"collectionid": 3,
+		"songid": 4
+	}, {
+		"collectionid": 3,
+		"songid": 6
 	} ]
 }

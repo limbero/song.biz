@@ -15,7 +15,7 @@
 		"type": "Student"
 	}, {
 		"songid": 3,
-		"title": "Song 3",
+		"title": "Jag Ska Festa",
 		"lyrics": "Jag skall festa, ta det lugnt med spriten<br>ha det roligt utan att va' full.<br>Inte krypa runt med festeliten,<br>ta det varligt för min egen skull.<br><br>Först en öl i torra strupen,<br>efter det så kommer supen,<br>i med vinet, ner med punschen<br>sist en groggbuffé.<br><br>Jag är skitfull, däckar först av alla<br>missar festen, men vad gör väl dé?<br>Blandar hejdlöst öl och gammal filmjölk,<br>kastar upp på bordsdamen brevé!",
 		"melody": "Bamse",
 		"composer": "D-LTH, sångarstriden -87",
@@ -27,5 +27,26 @@
 		"melody": "Du Gamla Du Fria",
 		"composer": "Carl XVI Gustav",
 		"type": "National Anthem"
+	}, {
+		"songid": 5,
+		"title": "Integralvisan",
+		"lyrics": "En liten enkel integral<br>i ett vektoranalystal<br>ni har besväret,<br>ni har besväret att derivera.<br>Men tar man Stokes sats däruppå<br>så blir det så enkelt så<br>att integralen, att integralen<br>evaluera.<br>Och rotationen, den integreras<br>sen över ytan utav en boll,<br>koordinaterna transformeras,<br>så integranden blir bara noll.<br>En liten enkel integral<br>i ett vektoranalystal<br>kan va så djävlig<br>att man ej hinner<br>med något mera.",
+		"melody": "Med En Enkel Tulipan",
+		"composer": "Okänd",
+		"type": "Student"
+	}, {
+		"songid": 6,
+		"title": "Invers Aptit",
+		"lyrics": "Nu fyllas många magar små<br>av iskall renad sprit.<br>Men några kastar åter opp.<br>Det är invers aptit.",
+		"melody": "Nu Tändas Tusen Juleljus",
+		"composer": "Okänd",
+		"type": "Student"
+	}, {
+		"songid": 7,
+		"title": "Länka Lilla Dator Där",
+		"lyrics": "Länka lilla dator där,<br>hur jag undrar hur du är,<br>ständigt frestar du mitt mod,<br>med en massa fel i kod.<br>Blinka lilla dator kär, <br>vad jag undrar hur du gör.<br><br>När den sköna sol blitt släckt,<br>strax du startas upp så käckt.<br>Börjar klar din stilla gång,<br>glimmar, glimmar natten lång.<br>Länka lilla dator kär,<br>jag undrar vad klockan är.",
+		"melody": "Blinka Lilla Stjärna Där",
+		"composer": "Okänd",
+		"type": "Student"
 	} ]
 }
