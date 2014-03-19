@@ -2,13 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="resources/note.jpg">
+    <link rel="icon" type="image/png" href="resources/newnote.png">
     <title>SÅNGBOK</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="resources/style.css">
-
-    <?php echo '<!--bahjs-->'; ?>
 </head>
 <!-- MAIN VIEW -->
 <body>
