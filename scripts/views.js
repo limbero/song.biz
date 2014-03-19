@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	searchfilter="";
 	console.log(model.songs);
-	getSearchResults();
+	setTimeout(getSearchResults, 200);
 });
 
 function getSearchResults() {
