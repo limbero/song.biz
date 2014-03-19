@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="resources/style.css">
 
-    <?php echo 'bahjs'; ?>
+    <?php echo '<!--bahjs-->'; ?>
 </head>
 <!-- MAIN VIEW -->
 <body style="height: 100%">
@@ -37,11 +37,11 @@
                 <input id="searchField" type="text">
             </div>
             <div id="selectSearchArea">
-                <select>
-                    <option value="songs">Songs</option>
-                    <option value="users">Users</option>
-                    <option value="collections">Collections</option>
-                </select>
+                <form>
+                    <input type="radio" name="type" id="songs" value="songs"><label for="songs">Songs</label>
+                    <input type="radio" name="type" id="users" value="users"><label for="users">Users</label>
+                    <input type="radio" name="type" id="collections" value="collections"><label for="collections">Collections</label>
+                </form>
             </div>
             <div id="searchresults">
             </div>
