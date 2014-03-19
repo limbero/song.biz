@@ -197,14 +197,15 @@ hr {
 
 	text-align: center;
 
-	transition: all 0.5s;
+	transition: all 0.25s;
 
 	cursor: pointer;
 }
 .card:hover {
-	background: #FFD;
+	/*box-shadow: inset 0 0 0 3px #FF0;*/
+	border-color: #B25C56;
 
-	transition: all 0.15s;
+	transition: all 0.25s;
 }
 
 .card h1 {

@@ -18,7 +18,7 @@ function getSearchResults() {
 			}
 		}
 		$('.card').click(function () {
-			$('.more', this).toggle();
+			$('.more', this).slideToggle(200);
 		});
 	}
 	else if(searchtype==='users'){
