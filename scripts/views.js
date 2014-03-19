@@ -23,13 +23,6 @@ $(document).ready(function () {
 					j++;
 				}
 			}
-			/*else if(cur.name === "shortdrinks") {
-				var j = 0;
-				while(cur.drinks[j] != null) {
-					$('#shortdrinks').append("<li>"+cur.drinks[j].name+"</li>");
-					j++;
-				}
-			}*/
 			else if(cur.name === "cocktails") {
 				var j = 0;
 				while(cur.drinks[j] != null) {
