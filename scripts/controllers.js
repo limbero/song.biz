@@ -1,24 +1,22 @@
 $(document).ready(function () {
 	$('#searchBtn').click(function () {
-		createMiddleView('search');
+		swapMiddleView('search');
 	});
 
 	$('#browseBtn').click(function () {
-		createMiddleView('browse');
+		swapMiddleView('browse');
 	});
 
 	$('#searchBtn').click();
 });
 
-function createMiddleView(type) {
+function swapMiddleView(type) {
 	if(type === 'search') {
-		$('#midpane').html('<div class="row"><div id="searchFieldArea"><input id="searchField" type="text"></div></div><div class="row"><div id="searchresults"></div></div>');
-		$('#searchField').keyup(function () {
-			console.log('le search');
-			//REMEMBER TOLOWERCASE AMAZING SEARCH ALGORITHM
-		});
+		$('#search').show();
+		$('#browse').hide();
 	}
 	else if(type === 'browse') {
-		$('#midpane').html('browse lol');
+		$('#browse').show();
+		$('#search').hide();
 	}
 }

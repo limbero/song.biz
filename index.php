@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/style.css">
 
 </head>
 <!-- MAIN VIEW -->
@@ -31,7 +32,24 @@
 
     <!-- Middle pane -->
     <div id="midpane" class="container col-md-6" style="background-color: #ffb3ae; height: 100%">
-        <span class="initialmsg">Välj en kategori och en drink till vänster</span></div>
+        <div id="search" class="row">
+            <div id="searchFieldArea">
+                <input id="searchField" type="text">
+            </div>
+            <div id="selectSearchArea">
+                <select>
+                    <option value="songs">Songs</option>
+                    <option value="users">Users</option>
+                    <option value="collections">Collections</option>
+                </select>
+            </div>
+            <div id="searchresults">
+            </div>
+        </div>
+        <div id="browse" style="display:none;" class="row">
+            browse lol
+        </div>
+    </div>
 
     <!-- Right pane -->
     <div id="rightpane" class="container col-md-3" style="background-color: #c7ffde; height: 100%">
