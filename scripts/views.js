@@ -41,4 +41,25 @@ function getSearchResults() {
 	$('.card').click(function () {
 		$('.more', this).slideToggle(100);
 	});
+
 }
+function fillBrowse() {
+	$('#browseStudent').html('');
+	var students = $('#browseStudent');
+	var count = 0;
+	var roof = model.songs.length;
+	for(var i=0; i<roof; i++) {
+		if(count < 3) {
+			if(model.songs[i].getType().toLowerCase()==='student') {
+				console.log(model.songs[i]);
+				students.append('<div id="song'+i+'" class="card song"><h1>'+model.songs[i].getTitle()+'</h1><div class="more"><h2>Kompositör: '+model.songs[i].getComposer()+'<br> Melodi: '+model.songs[i].getMelody()+'</h2><p>'+model.songs[i].getLyrics()+'</p></div></div>');
+				count++;
+			}
+		}
+		
+	}
+}
+
+
+
+

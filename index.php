@@ -54,37 +54,46 @@
                     </div>
                     <!--Browse-->
                     <div id="browse" class="browse" style="display:none;" class="row">
-                        <h2>Student</h2>
-                        <h2>Party</h2>
-                        <h2>National Anthem</h2>
-                    </div>
-                </td>
-                <!-- MIDDLE RIGHT -->
-                <td id="b3">
+                     <h2>Student</h2>
+                     <div id="browseStudent">
+                        
+                     </div>
+                     <h2>Party</h2>
+                     <div id="browseParty">
+                         
+                     </div>
+                     <h2>National Anthem</h2>
+                     <div id="browseNa">
+                      
+                     </div>
+                 </div>
+             </td>
+             <!-- MIDDLE RIGHT -->
+             <td id="b3">
 
-                </td>
-            </tr>
-            <tr>
-                <!-- BOTTOM LEFT -->
-                <td id="c1">
-                    <hr>
-                </td>
-                <!-- BOTTOM MIDDLE -->
-                <td id="c2">
+             </td>
+         </tr>
+         <tr>
+            <!-- BOTTOM LEFT -->
+            <td id="c1">
+                <hr>
+            </td>
+            <!-- BOTTOM MIDDLE -->
+            <td id="c2">
 
-                </td>
-                <!-- BOTTOM RIGHT -->
-                <td id="c3">
-                    <hr>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+            </td>
+            <!-- BOTTOM RIGHT -->
+            <td id="c3">
+                <hr>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-    <script src="scripts/model.js"></script>
-    <script src="scripts/controllers.js"></script>
-    <script src="scripts/views.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script src="scripts/model.js"></script>
+<script src="scripts/controllers.js"></script>
+<script src="scripts/views.js"></script>
 </body>
 </html>
