@@ -49,10 +49,14 @@
                 </td>
                 <!-- MIDDLE MIDDLE -->
                 <td id="b2">
+                    <!--Search-->
                     <div id="searchresults" class="search">
                     </div>
+                    <!--Browse-->
                     <div id="browse" class="browse" style="display:none;" class="row">
-                        browse lol
+                        <h2>Student</h2>
+                        <h2>Party</h2>
+                        <h2>National Anthem</h2>
                     </div>
                 </td>
                 <!-- MIDDLE RIGHT -->
