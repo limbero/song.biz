@@ -18,7 +18,7 @@
                     <button id="searchBtn">SEARCH</button><br>
                     <button id="browseBtn">BROWSE</button><br><br>
                     <span class="semibold lightred" id="user">Jesper Bratt</span><br>
-                    <span class="semilight darkred" id="user_thing">MEGA POWER</span>
+                    <a href="?logout=1" class="semilight darkred" id="user_thing">LOGOUT</a>
                     <hr>
                 </td>
                 <!-- TOP MIDDLE -->
