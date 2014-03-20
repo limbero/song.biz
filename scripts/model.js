@@ -70,7 +70,7 @@ Collections
 //This is the Collection constructor
 //If you want to create a new collection call
 // var collection = new Collection("My Collection", [], user.getName(), true)
-function Collection(name, songs, creator, isPublic) {
+function Collection(name, description, songs, creator, isPublic) {
 
 	/*
 	TODO: HAS TO BE REDONE TO BE ABLE TO ADD SONGS TO AN EXISTING COLLECTION
@@ -78,6 +78,7 @@ function Collection(name, songs, creator, isPublic) {
 	*/
 
 	var _name = name; //String
+	var _description = description; //String
 	var _songs = songs; //Array of Song
 	var _creator = creator; // String
 	var _isPublic = isPublic; // Boolean
@@ -89,6 +90,15 @@ function Collection(name, songs, creator, isPublic) {
 
 	this.getName = function(){
 		return _name;
+	}
+
+	this.setDescription = function(description){
+		_description = description;
+		model.notifyObservers();
+	}
+
+	this.getDescription = function(){
+		return _description;
 	}
 
 	this.addSong = function(song) {
@@ -261,13 +271,13 @@ function Model() {
 	var listeners = [];
 	
 	this.notifyObservers = function (args) {
-	    for (var i = 0; i < listeners.length; i++){
-	        listeners[i].update(args);
-	    }
+		    for (var i = 0; i < listeners.length; i++){
+			        listeners[i].update(args);
+		    }
 	};
 	
 	this.addObserver = function (listener) {
-	    listeners.push(listener);
+		    listeners.push(listener);
 	};
 	//*** END OBSERVABLE PATTERN ***
 }

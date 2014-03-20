@@ -44,6 +44,8 @@ function getSearchResults() {
 
 }
 
+//Function for putting stuff in the browse view
+
 function fillBrowse() {
 	$('#browseStudent').html('');
 	var students = $('#browseStudent');
@@ -94,6 +96,19 @@ function fillBrowse() {
 	$('.card').click(function () {
 		$('.more', this).slideToggle(100);
 	});
+
+}
+
+function addCollection() {
+	var name = $('#collectionName');
+	var description = $('#collectionDescription');
+
+	this.json {
+		"collectionid": 5;
+		"title": name,
+		"subtitle": description,
+		"public": true
+	}
 }
 
 

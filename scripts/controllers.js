@@ -17,6 +17,10 @@ $(document).ready(function () {
 	$('#searchtype').change(function () {
 		getSearchResults();
 	});
+
+	$('#addBtn').click(function () {
+		addCollection();
+	});
 });
 
 function swapMiddleView(type) {
