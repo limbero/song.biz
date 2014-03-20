@@ -148,6 +148,25 @@ hr {
 	background: #777;
 }
 
+#browseTop h2 {
+	color: #c7ffde;
+	font-family: 'Roboto Condensed';
+	font-weight: 300;
+	font-size: 3em;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-bottom: 0px;
+}
+
+#browseTop h4 {
+	color: #c7ffde;
+	font-family: 'Roboto Condensed';
+	font-weight: 300;
+	font-size: 1.25em;
+	margin-left: 10px;
+	margin-top: 0px;
+}
+
 /*TOP RIGHT*/
 #a3 {
 	width: 300px;

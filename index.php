@@ -33,6 +33,10 @@
                             <input type="radio" name="type" id="collections" value="collections"><label for="collections">COLLECTIONS</label>
                         </form>
                     </div>
+                    <div id="browseTop" class="browse" style="display:none">
+                        <h2>Browse</h2>
+                        <h4>Browse through a selection of our most popular songs</h4>
+                    </div>
                     <hr>
                 </td>
                 <!-- TOP RIGHT -->
@@ -54,26 +58,26 @@
                     </div>
                     <!--Browse-->
                     <div id="browse" class="browse" style="display:none;" class="row">
-                     <h2>Student</h2>
-                     <div id="browseStudent">
-                        
-                     </div>
-                     <h2>Party</h2>
-                     <div id="browseParty">
-                         
-                     </div>
-                     <h2>National Anthem</h2>
-                     <div id="browseNa">
-                      
-                     </div>
-                 </div>
-             </td>
-             <!-- MIDDLE RIGHT -->
-             <td id="b3">
+                       <h2>Student</h2>
+                       <div id="browseStudent">
 
-             </td>
-         </tr>
-         <tr>
+                       </div>
+                       <h2>Party</h2>
+                       <div id="browseParty">
+
+                       </div>
+                       <h2>National Anthem</h2>
+                       <div id="browseNa">
+
+                       </div>
+                   </div>
+               </td>
+               <!-- MIDDLE RIGHT -->
+               <td id="b3">
+
+               </td>
+           </tr>
+           <tr>
             <!-- BOTTOM LEFT -->
             <td id="c1">
                 <hr>

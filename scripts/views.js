@@ -43,6 +43,7 @@ function getSearchResults() {
 	});
 
 }
+
 function fillBrowse() {
 	$('#browseStudent').html('');
 	var students = $('#browseStudent');
@@ -58,6 +59,41 @@ function fillBrowse() {
 		}
 		
 	}
+
+	$('#browseParty').html('');
+	var partys = $('#browseParty');
+	count = 0;
+		for(var i=0; i<roof; i++) {
+		if(count < 3) {
+			if(model.songs[i].getType().toLowerCase()==='party') {
+				console.log(model.songs[i]);
+				partys.append('<div id="song'+i+'" class="card song"><h1>'+model.songs[i].getTitle()+'</h1><div class="more"><h2>Kompositör: '+model.songs[i].getComposer()+'<br> Melodi: '+model.songs[i].getMelody()+'</h2><p>'+model.songs[i].getLyrics()+'</p></div></div>');
+				count++;
+			}
+		}
+		
+	}
+
+	$('#browseNa').html('');
+	var nas = $('#browseNa');
+	count = 0;
+		for(var i=0; i<roof; i++) {
+		if(count < 3) {
+			if(model.songs[i].getType().toLowerCase()==='national anthem') {
+				console.log(model.songs[i]);
+				nas.append('<div id="song'+i+'" class="card song"><h1>'+model.songs[i].getTitle()+'</h1><div class="more"><h2>Kompositör: '+model.songs[i].getComposer()+'<br> Melodi: '+model.songs[i].getMelody()+'</h2><p>'+model.songs[i].getLyrics()+'</p></div></div>');
+				count++;
+			}
+		}
+		
+	}
+
+	$('.card.song').draggable({ revert: true, helper: "clone", start: function(e, ui) { $(ui.helper).addClass("ui-draggable-helper"); } });
+	$('.card.song').draggable("option", "cursorAt", { left: 5 });
+
+	$('.card').click(function () {
+		$('.more', this).slideToggle(100);
+	});
 }
 
 
