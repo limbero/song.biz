@@ -65,7 +65,7 @@ function fillBrowse() {
 	$('#browseParty').html('');
 	var partys = $('#browseParty');
 	count = 0;
-		for(var i=0; i<roof; i++) {
+	for(var i=0; i<roof; i++) {
 		if(count < 3) {
 			if(model.songs[i].getType().toLowerCase()==='party') {
 				console.log(model.songs[i]);
@@ -79,7 +79,7 @@ function fillBrowse() {
 	$('#browseNa').html('');
 	var nas = $('#browseNa');
 	count = 0;
-		for(var i=0; i<roof; i++) {
+	for(var i=0; i<roof; i++) {
 		if(count < 3) {
 			if(model.songs[i].getType().toLowerCase()==='national anthem') {
 				console.log(model.songs[i]);
@@ -99,16 +99,20 @@ function fillBrowse() {
 
 }
 
-function addCollection() {
+function addNewCollection() {
 	var name = $('#collectionName');
 	var description = $('#collectionDescription');
 
-	this.json {
-		"collectionid": 5;
-		"title": name,
-		"subtitle": description,
-		"public": true
-	}
+	// create a new collection object
+	model.workingCollection.setName(name);
+	console.log(name);
+	model.workingCollection.setDescription(description);
+	console.log(description);
+	model.workingCollection.setCreator(user.getName());
+	model.workingCollection.setIsPublic(true);
+	//model.workingCollection = new Collection(name, description, [], user.getName(), true); 
+	console.log(model.workingCollection);
+	model.addCollection();
 }
 
 

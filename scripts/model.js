@@ -69,7 +69,7 @@ Collections
 
 //This is the Collection constructor
 //If you want to create a new collection call
-// var collection = new Collection("My Collection", [], user.getName(), true)
+// var collection = new Collection("My Collection","this is awesum", [], user.getName(), true)
 function Collection(name, description, songs, creator, isPublic) {
 
 	/*
@@ -219,7 +219,7 @@ function Model() {
 	this.songs = [];
 	this.collections = [];
 	this.users = [];
-	this.workingCollection = new Collection("", [], "", false);
+	this.workingCollection = new Collection("","", [], "", false);
 
 	this.addSong = function (title, lyrics, melody, composer, type){
 		var _melody;
