@@ -81,6 +81,11 @@
             <!-- BOTTOM LEFT -->
             <td id="c1">
                 <hr>
+                <form id="createColl">
+                <p><label for="collName">Name:</label><input id="collectionName" type="text" name="collName"></p> 
+                <p><label for="collDesc">Description:</label><input id="collectionDescription" type="text" name="collDesc"></p>
+                <button id="addBtn">+</button>
+                </form>
             </td>
             <!-- BOTTOM MIDDLE -->
             <td id="c2">
