@@ -213,6 +213,19 @@ hr {
 .usercollection.selected {
 	background: rgba(104, 178, 135, 0.5);
 }
+.usercollection button {
+	position: absolute;
+	left: 10px;
+	top: 13px;
+
+	background: none;
+	border: none;
+
+	cursor: pointer;
+
+	font-weight: 100;
+	font-size: 1em;
+}
 .usercollection h1 {
 	font-size: 1.15em;
 	font-family: 'Roboto Condensed';
