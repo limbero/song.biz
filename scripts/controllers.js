@@ -62,6 +62,16 @@ $(document).ready(function () {
 
 	});
 
+	$('#returnBtn').click(function() {
+		$('#songTitle').val("");
+		$('#songLyrics').val("");
+		$('#songMelody').val("");
+		$('#songComposer').val("");
+		$('#songType').val("");
+		$('#overlay').hide();
+
+	});
+
 	$('#user_thing').click(function () {
 		if(current_user == "") {
 			window.location.href = "?user="+$('#userfield').val()+"&password="+$('#passfield').val();

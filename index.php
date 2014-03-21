@@ -98,6 +98,7 @@ else {
                             <input id="songComposer" type="text" name="songComposer" placeholder="Composer"><br>
                             <input id="songType" type="text" name="songTitle" placeholder="Type"><br>
                             <button id="submitSongBtn">Submit</button>
+                            <button id="returnBtn">Return</button>
                         </div>
                     </div>
                     <!--Browse-->
