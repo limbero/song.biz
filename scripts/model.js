@@ -244,6 +244,7 @@ function Model () {
 	this.collections = [];
 	this.users = [];
 
+	/* ADDING SONGS/COLLECTIONS/USERS */
 	this.addSong = function (id, title, lyrics, melody, composer, type){
 		var _melody;
 		var _composer;
@@ -280,6 +281,19 @@ function Model () {
 		// SAVE THIS TO DATABASE!
 	}
 
+	this.addUser = function (id, username, firstname, surname, password) {
+		if(!id || !username || !firstname || !surname || !password) { // all fields are required for users.
+			return;
+		}
+		var now = new Date();
+		var user = new User(id, username, firstname, surname, now, password);
+		this.users.push(user);
+		this.notifyObservers;
+
+		// SAVE THIS TO DATABASE!
+	}
+
+	/* MANIPULATING COLLECTIONS (ADD, REMOVE SONGS/USERS) */
 	this.addSongToCollection = function (collectionid, songid) {
 		var i = 0;
 		while (this.collections[i] != null) {
@@ -332,18 +346,38 @@ function Model () {
 		// SAVE THIS TO DATABASE!
 	}
 
-	this.addUser = function (id, username, firstname, surname, password) {
-		if(!id || !username || !firstname || !surname || !password) { // all fields are required for users.
-			return;
+	/* GET OBJECTS BY ID */
+	this.getSongById = function (songid) {
+		var i = 0;
+		while (this.songs[i] != null) {
+			if (this.songs[i].getId() === songid) {
+				return this.songs[i];
+			} 
+			i++;
 		}
-		var now = new Date();
-		var user = new User(id, username, firstname, surname, now, password);
-		this.users.push(user);
-		this.notifyObservers;
-
-		// SAVE THIS TO DATABASE!
 	}
 
+	this.getCollectionById = function (collectionid) {
+		var i = 0;
+		while (this.collections[i] != null) {
+			if (this.collections[i].getId() === collectionid) {
+				return this.collections[i];
+			} 
+			i++;
+		}
+	}
+
+	this.getUserById = function (userid) {
+		var i = 0;
+		while (this.users[i] != null) {
+			if (this.users[i].getId() === userid) {
+				return this.users[i];
+			} 
+			i++;
+		}
+	}
+
+	/* CLEARING MODEL AND DATABASE */
 	this.clearModel = function () {
 		this.songs = [];
 		this.users = [];
