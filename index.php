@@ -1,9 +1,16 @@
 <?php
-if($_GET["logout"]=="1") {
+if(isset($_GET["logout"]) && $_GET["logout"]=="1") {
     setcookie("user", "", time()+86400);
 }
-else if($_GET["login"]=="1") {
-    setcookie("user", "bratzie", time()+86400);
+else if(isset($_GET["user"]) && isset($_GET["password"])) {
+    $string = file_get_contents("db/users.json");
+    $json_a = json_decode($string,true);
+    foreach($json_a["users"] as $user) {
+        if($_GET["user"] == $user["username"] && $_GET["password"] == $user["password"]) {
+            //echo $user["username"].":".$user["password"]."<br>";
+            setcookie("user", $user["username"], time()+86400);
+        }
+    }
 }
 
 ?>
@@ -27,7 +34,7 @@ else if($_GET["login"]=="1") {
                     <button id="searchBtn">SEARCH</button><br>
                     <button id="browseBtn" class="inactive">BROWSE</button><br><br>
                     <span class="semibold lightred" id="user"></span><br>
-                    <a href="?logout=1" class="semilight darkred" id="user_thing">LOGOUT</a>
+                    <a class="semilight darkred" id="user_thing">LOGOUT</a>
                     <hr>
                 </td>
                 <!-- TOP MIDDLE -->

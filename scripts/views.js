@@ -53,7 +53,6 @@ function trylogin() {
 	if(!flag) {
 		$('#user').html("");
 		$('#user_thing').html("LOGIN");
-		$('#user_thing').attr("href", "?login=1");
 	}
 }
 

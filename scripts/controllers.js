@@ -34,6 +34,15 @@ $(document).ready(function () {
 		}
 
 	});
+
+	$('#user_thing').click(function () {
+		if(current_user == "") {
+			console.log('logging in');
+		}
+		else {
+			console.log('logging out');
+		}
+	});
 });
 
 function swapMiddleView(type) {

@@ -106,6 +106,8 @@ hr {
 	font-family: 'Roboto Condensed';
 	font-size: 1em;
 
+	cursor: pointer;
+
 	text-decoration: none;
 }
 
