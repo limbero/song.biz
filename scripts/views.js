@@ -18,6 +18,12 @@ $(document).ready(function () {
 		model.getCollectionById(activecollection).removeSong(parseInt(ui.draggable.attr('data-songid')));
 		$('#collectionsongs').fadeOut(100, function () { update(); $('#collectionsongs').fadeIn(100); });
 	} });
+
+	// Make collections dropable
+	$('#usercollections').droppable({ accept: ".card.collection", drop: function (event, ui) {
+		model.addCollectionToUser(userid,parseInt(ui.draggable.attr('data-collectionid')))
+		$('#usercollections').fadeOut(100, function () { update(); $('#usercollections').fadeIn(100); });
+	} });
 });
 
 function update() {
