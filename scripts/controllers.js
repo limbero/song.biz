@@ -28,6 +28,9 @@ function swapMiddleView(type) {
 		$('.search').show();
 		$('.browse').hide();
 
+		$('#searchBtn').removeClass('inactive');
+		$('#browseBtn').addClass('inactive');
+
 		$('#a2').css('background', '#FFB3AE');
 		$('#b2').css('background', '#FFB3AE');
 		$('#c2').css('background', '#FFB3AE');
@@ -35,6 +38,9 @@ function swapMiddleView(type) {
 	else if(type === 'browse') {
 		$('.browse').show();
 		$('.search').hide();
+
+		$('#searchBtn').addClass('inactive');
+		$('#browseBtn').removeClass('inactive');
 
 		$('#a2').css('background', '#68B287');
 		$('#b2').css('background', '#68B287');

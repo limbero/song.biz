@@ -90,6 +90,10 @@ hr {
 	color: #C7ffDE;
 }
 
+#a1 button.inactive {
+	box-shadow: -20px 0px 10px -10px rgba(0, 0, 0, 0.5) inset;
+}
+
 #user, #user_thing {
 	margin-right: 10px;
 

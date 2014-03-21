@@ -24,7 +24,7 @@ else if($_GET["login"]=="1") {
                 <!-- TOP LEFT -->
                 <td id="a1">
                     <button id="searchBtn">SEARCH</button><br>
-                    <button id="browseBtn">BROWSE</button><br><br>
+                    <button id="browseBtn" class="inactive">BROWSE</button><br><br>
                     <span class="semibold lightred" id="user"></span><br>
                     <a href="?logout=1" class="semilight darkred" id="user_thing">LOGOUT</a>
                     <hr>
