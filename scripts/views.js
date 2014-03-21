@@ -1,10 +1,20 @@
 $(document).ready(function () {
 
 	searchfilter="";
+	activecollection = -1;
+
 	setTimeout(trylogin, 200);
 	setTimeout(getSearchResults, 200);
 	setTimeout(populateUserCollections, 400);
+	setTimeout(updateActiveCollection, 500);
 });
+
+function update() {
+	trylogin();
+	getSearchResults();
+	populateUserCollections();
+	updateActiveCollection();
+}
 
 function trylogin() {
 	var users = model.users;
@@ -29,26 +39,44 @@ function trylogin() {
 }
 
 function populateUserCollections() {
+	$('#usercollections').html('');
+
 	var roof = model.collections.length;
-	var flag = true;
+	var flag;
+	if(activecollection === -1) { flag = true; }
 	for(var i=0; i<roof; i++) {
 		if(model.collections[i].getCreator() === userid) {
+			var mystring = '<div data-collectionid="'+model.collections[i].getId()+'" class="usercollection';
 			if(flag) {
-				$('#usercollections').append('<div data-collectionid="'+model.collections[i].getId()+'" class="usercollection selected"><h1 class="lightred">'+model.collections[i].getTitle().toUpperCase()+'</h1><h2 class="darkred">'+model.collections[i].getSubtitle()+'</h2></div>');
-				flag = false;
+				mystring += ' selected';
 				activecollection = model.collections[i].getId();
+				flag = false;
 			}
-			else {
-				$('#usercollections').append('<div data-collectionid="'+model.collections[i].getId()+'" class="usercollection"><h1 class="lightred">'+model.collections[i].getTitle().toUpperCase()+'</h1><h2 class="darkred">'+model.collections[i].getSubtitle()+'</h2></div>');
+			else if (activecollection === model.collections[i].getId()) {
+				mystring += ' selected';
 			}
+			mystring += '"><h1 class="lightred">'+model.collections[i].getTitle().toUpperCase()+'</h1><h2 class="darkred">'+model.collections[i].getSubtitle()+'</h2></div>'
+			$('#usercollections').append(mystring);
 		}
 	}
+
 
 	$('.usercollection').click(function () {
 		$('.usercollection').removeClass('selected');
 		$(this).addClass('selected');
 		activecollection = parseInt($(this).attr('data-collectionid'));
+		update();
 	});
+}
+
+function updateActiveCollection() {
+	var roof = model.collections.length;
+	var flag = true;
+	for(var i=0; i<roof; i++) {
+		if(model.collections[i].getId() === activecollection) {
+			$('#current_collection').html(model.collections[i].getTitle());
+		}
+	}
 }
 
 function getSearchResults() {
