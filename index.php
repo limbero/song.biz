@@ -1,5 +1,10 @@
 <?php
-setcookie("user", "bratzie", time()+86400);
+if($_GET["logout"]=="1") {
+    setcookie("user", "", time()+86400);
+}
+else if($_GET["login"]=="1") {
+    setcookie("user", "bratzie", time()+86400);
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -52,7 +57,7 @@ setcookie("user", "bratzie", time()+86400);
             <tr>
                 <!-- MIDDLE LEFT -->
                 <td id="b1">
-
+                    <div id="collections"></div>
                 </td>
                 <!-- MIDDLE MIDDLE -->
                 <td id="b2">

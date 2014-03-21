@@ -14,6 +14,7 @@ function trylogin() {
 	for(var i=0; i<roof; i++) {
 		if(users[i].getUsername() === current_user) {
 			$('#user').html(users[i].getFirstname()+" "+users[i].getSurname());
+			userid = users[i].getId();
 			flag = true;
 			break;
 		}
@@ -22,11 +23,12 @@ function trylogin() {
 	if(!flag) {
 		$('#user').html("");
 		$('#user_thing').html("LOGIN");
+		$('#user_thing').attr("href", "?login=1");
 	}
 }
 
 function populateUserCollections() {
-
+	
 }
 
 function getSearchResults() {
