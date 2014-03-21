@@ -28,7 +28,7 @@ function trylogin() {
 }
 
 function populateUserCollections() {
-	
+
 }
 
 function getSearchResults() {
@@ -55,8 +55,8 @@ function getSearchResults() {
 	else if(searchtype==='collections'){
 		var roof = model.collections.length;
 		for(var i=0; i<roof; i++) {
-			if(model.collections[i].getName().toLowerCase().indexOf(searchfilter) != -1) {
-				$('#searchresults').append('<div class="card collection ui-widget-content"><h1>'+model.collections[i].getName()+'</h1></div>');
+			if(model.collections[i].getTitle().toLowerCase().indexOf(searchfilter) != -1) {
+				$('#searchresults').append('<div class="card collection ui-widget-content"><h1>'+model.collections[i].getTitle()+'</h1></div>');
 			}
 		}
 	}
@@ -133,9 +133,9 @@ function addNewCollection() {
 	console.log(name);
 	model.workingCollection.setDescription(description);
 	console.log(description);
-	model.workingCollection.setCreator(user.getName());
+	model.workingCollection.setCreator(user.getTitle());
 	model.workingCollection.setIsPublic(true);
-	//model.workingCollection = new Collection(name, description, [], user.getName(), true); 
+	//model.workingCollection = new Collection(name, description, [], user.getTitle(), true); 
 	console.log(model.workingCollection);
 	model.addCollection();
 }
