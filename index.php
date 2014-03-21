@@ -74,6 +74,19 @@ else if(isset($_GET["user"]) && isset($_GET["password"])) {
                     <!--Search-->
                     <div id="searchresults" class="search">
                     </div>
+                    <!--Overlay-->
+                    <div id="overlay" style="display:none">
+                        <form id="addSongForm">
+                            <h4>Add a song</h4>
+                            <input id="songTitle" type="text" name="songTitle" placeholder="Title"><br>
+                            <textarea id="songLyrics" rows="10" columns="50" placeholder="Lyrics"></textarea><br>
+                            <!-- <input id="songLyrics" type="text" name="songLyrics" placeholder="Lyrics"><br> -->
+                            <input id="songMelody" type="text" name="songMelody" placeholder="Melody"><br>
+                            <input id="songComposer" type="text" name="songComposer" placeholder="Composer"><br>
+                            <input id="songType" type="text" name="songTitle" placeholder="Type"><br>
+                            <button id="submitSongBtn">Submit</button>
+                        </form>
+                    </div>
                     <!--Browse-->
                     <div id="browse" class="browse" style="display:none;" class="row">
                      <h2>Student</h2>

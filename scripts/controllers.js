@@ -35,6 +35,33 @@ $(document).ready(function () {
 
 	});
 
+	$('#addSongBtn').click(function() {
+		$('#overlay').show();
+
+	});
+
+	$('#submitSongBtn').click(function() {
+		var title = $('#songTitle').val();
+		var lyrics = $('#songLyrics').val();
+		var melody = $('#songMelody').val();
+		var composer = $('#songComposer').val();
+		var type = $('#songType').val();
+		var songId = model.getHighestSongId() + 1;
+
+		if(title !== "" || lyrics !== "" || melody !== "" || composer !== "" || type !== "") {
+			model.addSong(songId, title, lyrics, melody, composer, type);
+			update();
+
+			$('#songTitle').val("");
+			$('#songLyrics').val("");
+			$('#songMelody').val("");
+			$('#songComposer').val("");
+			$('#songType').val("");
+			$('#overlay').hide();
+		}
+
+	});
+
 	$('#user_thing').click(function () {
 		if(current_user == "") {
 			window.location.href = "?user="+$('#userfield').val()+"&password="+$('#passfield').val();
