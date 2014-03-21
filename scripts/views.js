@@ -1,14 +1,33 @@
 $(document).ready(function () {
-	var users = model.users;
-	for(user in users) {
-		if(user.username === userid) {
-			$('#user').html(user.firstname+" "+user.surname);
-		}
-	}
+	setTimeout(trylogin, 200);
 
 	searchfilter="";
 	setTimeout(getSearchResults, 200);
 });
+
+function trylogin() {
+	var users = model.users;
+	var roof = users.length;
+
+	var flag = false;
+
+	for(var i=0; i<roof; i++) {
+		if(users[i].getUsername() === current_user) {
+			$('#user').html(users[i].getFirstname()+" "+users[i].getSurname());
+			flag = true;
+			break;
+		}
+	}
+
+	if(!flag) {
+		$('#user').html("");
+		$('#user_thing').html("LOGIN");
+	}
+}
+
+function populateUserCollections() {
+
+}
 
 function getSearchResults() {
 	$('#searchresults').html('');

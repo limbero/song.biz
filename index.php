@@ -1,5 +1,5 @@
 <?php
-setcookie("user", "limbero", time()+86400);
+setcookie("user", "bratzie", time()+86400);
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,7 +20,7 @@ setcookie("user", "limbero", time()+86400);
                 <td id="a1">
                     <button id="searchBtn">SEARCH</button><br>
                     <button id="browseBtn">BROWSE</button><br><br>
-                    <span class="semibold lightred" id="user">Jesper Bratt</span><br>
+                    <span class="semibold lightred" id="user"></span><br>
                     <a href="?logout=1" class="semilight darkred" id="user_thing">LOGOUT</a>
                     <hr>
                 </td>
@@ -102,7 +102,7 @@ setcookie("user", "limbero", time()+86400);
     </tbody>
 </table>
 
-<script> var userid = "<?php echo $_COOKIE["user"]; ?>";</script>
+<script> var current_user = "<?php echo $_COOKIE["user"]; ?>";</script>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 <script src="scripts/model.js"></script>
