@@ -57,7 +57,7 @@ else if($_GET["login"]=="1") {
             <tr>
                 <!-- MIDDLE LEFT -->
                 <td id="b1">
-                    <div id="collections"></div>
+                    <div id="usercollections"></div>
                 </td>
                 <!-- MIDDLE MIDDLE -->
                 <td id="b2">

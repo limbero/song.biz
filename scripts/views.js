@@ -1,8 +1,9 @@
 $(document).ready(function () {
-	setTimeout(trylogin, 200);
 
 	searchfilter="";
+	setTimeout(trylogin, 200);
 	setTimeout(getSearchResults, 200);
+	setTimeout(populateUserCollections, 400);
 });
 
 function trylogin() {
@@ -28,7 +29,26 @@ function trylogin() {
 }
 
 function populateUserCollections() {
+	var roof = model.collections.length;
+	var flag = true;
+	for(var i=0; i<roof; i++) {
+		if(model.collections[i].getCreator() === userid) {
+			if(flag) {
+				$('#usercollections').append('<div data-collectionid="'+model.collections[i].getId()+'" class="usercollection selected"><h1 class="lightred">'+model.collections[i].getTitle().toUpperCase()+'</h1><h2 class="darkred">'+model.collections[i].getSubtitle()+'</h2></div>');
+				flag = false;
+				activecollection = model.collections[i].getId();
+			}
+			else {
+				$('#usercollections').append('<div data-collectionid="'+model.collections[i].getId()+'" class="usercollection"><h1 class="lightred">'+model.collections[i].getTitle().toUpperCase()+'</h1><h2 class="darkred">'+model.collections[i].getSubtitle()+'</h2></div>');
+			}
+		}
+	}
 
+	$('.usercollection').click(function () {
+		$('.usercollection').removeClass('selected');
+		$(this).addClass('selected');
+		activecollection = parseInt($(this).attr('data-collectionid'));
+	});
 }
 
 function getSearchResults() {
@@ -40,7 +60,7 @@ function getSearchResults() {
 		var roof = model.songs.length;
 		for(var i=0; i<roof; i++) {
 			if(model.songs[i].getComposer().toLowerCase().indexOf(searchfilter) != -1 || model.songs[i].getLyrics().toLowerCase().indexOf(searchfilter) != -1 || model.songs[i].getMelody().toLowerCase().indexOf(searchfilter) != -1 || model.songs[i].getTitle().toLowerCase().indexOf(searchfilter) != -1 || model.songs[i].getType().toLowerCase().indexOf(searchfilter) != -1) {
-				$('#searchresults').append('<div id="song'+i+'" class="card song"><h1>'+model.songs[i].getTitle()+'</h1><div class="more"><h2>Kompositör: '+model.songs[i].getComposer()+'<br> Melodi: '+model.songs[i].getMelody()+'</h2><p>'+model.songs[i].getLyrics()+'</p></div></div>');
+				$('#searchresults').append('<div data-songid="'+i+'" class="card song"><h1>'+model.songs[i].getTitle()+'</h1><div class="more"><h2>Kompositör: '+model.songs[i].getComposer()+'<br> Melodi: '+model.songs[i].getMelody()+'</h2><p>'+model.songs[i].getLyrics()+'</p></div></div>');
 			}
 		}
 	}
@@ -56,7 +76,7 @@ function getSearchResults() {
 		var roof = model.collections.length;
 		for(var i=0; i<roof; i++) {
 			if(model.collections[i].getTitle().toLowerCase().indexOf(searchfilter) != -1) {
-				$('#searchresults').append('<div class="card collection ui-widget-content"><h1>'+model.collections[i].getTitle()+'</h1></div>');
+				$('#searchresults').append('<div data-collectionid="'+model.collections[i].getId()+'" class="card collection ui-widget-content"><h1>'+model.collections[i].getTitle()+'</h1></div>');
 			}
 		}
 	}
@@ -69,7 +89,6 @@ function getSearchResults() {
 	$('.card').click(function () {
 		$('.more', this).slideToggle(100);
 	});
-
 }
 
 //Function for putting stuff in the browse view
