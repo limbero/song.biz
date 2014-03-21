@@ -3,21 +3,25 @@
 		"collectionid": 1,
 		"title": "Collection 1",
 		"subtitle": "Subtitle of Collection 1",
-		"public": true
+		"creator": 0,
+		"ispublic": true
 	}, {
 		"collectionid": 2,
 		"title": "Collection 2",
 		"subtitle": "Subtitle of Collection 2",
-		"public": true
+		"creator": 0,
+		"ispublic": true
 	}, {
 		"collectionid": 3,
 		"title": "Collection 3",
 		"subtitle": "Subtitle of Collection 3",
-		"public": true
+		"creator": 1,
+		"ispublic": true
 	}, {
 		"collectionid": 4,
 		"title": "Collection 4",
 		"subtitle": "Subtitle of Collection 4",
-		"public": true
+		"creator": 2,
+		"ispublic": true
 	} ]
 }

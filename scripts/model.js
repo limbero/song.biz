@@ -80,18 +80,15 @@ Collections
 // This is the Collection constructor
 // If you want to create a new collection call
 // var collection = new Collection(1, My Collection", "this is awesum", user.getId(), true)
-function Collection(id, name, description, creator, isPublic) {
-
-	/*
-	TODO: HAS TO BE REDONE TO BE ABLE TO ADD SONGS TO AN EXISTING COLLECTION
-	WE SHOULD PROBABLY PASS COLLECTION ID WITH COLLECTION FUNCTIONS ?
-	*/
+function Collection(id, title, subtitle, creator, isPublic) {
 
 	var _id = id; // int
-	var _name = name; // String
-	var _description = description; // String
+	var _title = title; // String
+	var _subtitle = subtitle; // String
 	var _creator = creator; // int
 	var _isPublic = isPublic; // Boolean
+
+	var _songs = []; // array of songid's
 
 	this.setId = function(id) {
 		_id = id;
@@ -102,31 +99,31 @@ function Collection(id, name, description, creator, isPublic) {
 		return _id;
 	}
 
-	this.setName = function(name) {
-		_name = name;
+	this.setTitle = function(title) {
+		_title = title;
 		model.notifyObservers();
 	}
 
-	this.getName = function() {
-		return _name;
+	this.getTitle = function() {
+		return _title;
 	}
 
-	this.setDescription = function(description) {
-		_description = description;
+	this.setSubtitle = function(subtitle) {
+		_subtitle = subtitle;
 		model.notifyObservers();
 	}
 
-	this.getDescription = function() {
-		return _description;
+	this.getSubtitle = function() {
+		return _subtitle;
 	}
 
-	this.addSong = function(song) {
-		_songs.push(song);
+	this.addSong = function(songid) {
+		_songs.push(songid);
 		model.notifyObservers();
 	}
 
-	this.removeSong = function(song) {
-		var index = _songs.indexOf(song);
+	this.removeSong = function(songid) {
+		var index = _songs.indexOf(songid);
 		if(index > -1) {
 			_songs.splice(index,1);
 			model.notifyObservers();
@@ -185,54 +182,52 @@ function User(id, username, firstname, surname, joined, password) {
 	var _joined = joined; // Timestamp
 	var _password = password; // String (so secure)
 
-	this.setId = function(id){
+	var _collections = [];
+
+	this.setId = function(id) {
 		_id = id;
 		model.notifyObservers();
 	}
 
-	this.getId = function(){
-		return _id;
-	}
+	this.getId = function() { return _id; }
 
-	this.setUsername = function(username){
+	this.setUsername = function(username) {
 		_username = username;
 		model.notifyObservers();
 	}
 
-	this.getUsername = function(){
-		return _username;
-	}
+	this.getUsername = function() { return _username; }
 
-	this.setFirstname = function(firstname){
+	this.setFirstname = function(firstname) {
 		_firstname = firstname;
 		model.notifyObservers();
 	}
 
-	this.getFirstname = function(){
-		return _firstname;
-	}
+	this.getFirstname = function() { return _firstname;	}
 
-	this.setSurname = function(surname){
+	this.setSurname = function(surname) {
 		_surname = surname;
 		model.notifyObservers();
 	}
 
-	this.getSurname = function(){
-		return _surname;
-	}
+	this.getSurname = function() { return _surname;	}
 
-	this.joined = function(){
-		return _joined;
-	}
+	this.joined = function() { return _joined; }
 
-	this.setPassword = function(password){
+	this.setPassword = function(password) {
 		_password = password;
 		model.notifyObservers;
 	}
 
-	this.getPassword = function(){
-		return _password;
+	this.getPassword = function() {	return _password; }
+
+	// used to add collectionid to this user
+	this.addCollection = function(collectionid) {
+		_collections.push(collectionid);
+		model.notifyObservers();
 	}
+
+	this.getCollections = function() { return _collections; }
 }
 
 /***************************************
@@ -254,42 +249,60 @@ function Model () {
 		if(!id || !title || !lyrics) {
 			return;
 		}
-		if(melody) {
-			_melody = melody;
-		} else {
-			_melody = "Okänd";
-		}
-		if(composer) {
-			_composer = composer;
-		} else {
-			_composer = "Okänd";
-		}
+		// default values
+		_melody = (melody ? melody : "Okänd");
+		_composer = (composer ? composer : "Okänd");
+
 		var song = new Song(id, title, lyrics, _melody, _composer, type);
 		this.songs.push(song);
 		this.notifyObservers();
 	}
 
-	this.addCollection = function (id, name, description, creator, isPublic) {
-		var _description;
+	this.addCollection = function (id, title, subtitle, creator, isPublic) {
+		var _subtitle;
 		var _creator;
 		var _isPublic;
-		if(!id || !name) {
+		if(!id || !title) {
 			return;
 		}
-		_description = (description ? description : "");
+		// default values
+		_subtitle = (subtitle ? subtitle : "");
 		_creator = (creator ? creator : 0);
 		_isPublic = (isPublic ? isPublic : true);
 
+		var collection = new Collection(id, title, _subtitle, _creator, _isPublic);
 		this.collections.push(collection);
 		this.notifyObservers();
 	}
 
 	this.addSongToCollection = function (collectionid, songid) {
-
+		var index = this.collections.indexOf(collectionid);
+		if(index > -1) { // make sure collection exists
+			this.collections[index].addSong(songid);
+			console.log("Song: " + songid + " WAS added to collection: " + collectionid);
+			this.notifyObservers();
+		} else {
+			console.log("Song: " + songid + " NOT added to collection: " + collectionid + ", collection does not exist!");
+		}
 	}
 
 	this.removeSongFromCollection = function (collectionid, songid) {
-		
+		var index = this.collections.indexOf(collectionid);
+		if(index > -1) { // make sure collection exists
+			this.collections[index].removeSong(songid);
+			console.log("Song: " + songid + " WAS removed from collection: " + collectionid);
+			this.notifyObservers();
+		} else {
+			console.log("Song: " + songid + " NOT removed from collection: " + collectionid + ", collection does not exist!");
+		}
+	}
+
+	this.addCollectionToUser = function (userid, collectionid) {
+
+	}
+
+	this.removeCollectionFromUser = function (userid, collectionid) {
+
 	}
 
 	this.addUser = function (id, username, firstname, surname, password) {
@@ -333,7 +346,7 @@ function createTestData(){
 			var song = songs.songs[i];
 			model.addSong(song.songid, song.title, song.lyrics, song.melody, song.composer, song.type);
 			i++;
-			console.log(song.songid + ": " + song.title + " added!");
+			//console.log(song.songid + ": " + song.title + " added!");
 		}
 	});
 
@@ -344,28 +357,28 @@ function createTestData(){
 			var user = users.users[i];
 			model.addUser(user.userid, user.username, user.firstname, user.surname, user.password);
 			i++;
-			console.log(user.userid + ": " + user.title + " added!");
+			//console.log(user.userid + ": " + user.username + " added!");
 		}
 	});
-	
-	/*console.log("Song 2 is: " + model.songs[1].getTitle());
-	console.log("The lyrics of Song 1 is: " + model.songs[0].getLyrics());
-	console.log("Length of Collection 1 is: " + model.collections[0].getSongs().length);
-	console.log("This should be 0 and is: " + model.workingCollection.getSongs.length);*/
 
-	//var songs = model.collections[0].getSongs();
+	$.getJSON( "./db/collections.json", function( collections ) {
+		console.log(collections);
+		var i = 0;
+		while(collections.collections[i] != null) {
+			var collection = collections.collections[i];
+			model.addCollection(collection.collectionid, collection.title, collection.subtitle, collection.creator, collection.ispublic);
+			i++;
+			//console.log(collection.collectionid + ": " + collection.title + " added!");
+		}
+	});
 
-	/*console.log("");
-	console.log("Info om alla sånger som finns i den collectionen som skapats: ");
-	console.log("");*/
-
-	for (var i = songs.length - 1; i >= 0; i--) {
-		var song = songs[i];
-		/*console.log("Song Title: " + song.getTitle());
-		console.log("Song Lyrics: " + song.getLyrics());
-		console.log("Song Melody: " + song.getMelody());
-		console.log("Song Composer: " + song.getComposer());
-		console.log("Song Type: " + song.getType());
-		console.log("");*/
-	};
+	$.getJSON( "./db/cslinks.json", function( cslinks ) {
+		console.log(cslinks);
+		var i = 0;
+		while(cslinks.cslinks[i] != null) {
+			var cslink = cslinks.cslinks[i];
+			model.addSongToCollection(cslink.collectionid, cslink.songid);
+			i++;
+		}
+	});
 }
