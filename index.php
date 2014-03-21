@@ -1,16 +1,29 @@
 <?php
 if(isset($_GET["logout"]) && $_GET["logout"]=="1") {
     setcookie("user", "", time()+86400);
+    $currentuser = "";
 }
 else if(isset($_GET["user"]) && isset($_GET["password"])) {
     $string = file_get_contents("db/users.json");
     $json_a = json_decode($string,true);
+
+    $flag = false;
+
     foreach($json_a["users"] as $user) {
         if($_GET["user"] == $user["username"] && $_GET["password"] == $user["password"]) {
             //echo $user["username"].":".$user["password"]."<br>";
             setcookie("user", $user["username"], time()+86400);
+            $currentuser = $user["username"];
+            $flag = true;
         }
     }
+
+    if(!$flag) {
+        $currentuser = "";
+    }
+}
+else {
+    $currentuser = $_COOKIE["user"];
 }
 
 ?>
@@ -129,7 +142,7 @@ else if(isset($_GET["user"]) && isset($_GET["password"])) {
     </tbody>
 </table>
 
-<script> var current_user = "<?php echo $_COOKIE["user"]; ?>";</script>
+<script> var current_user = "<?php echo $currentuser; ?>";</script>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 <script src="scripts/model.js"></script>
