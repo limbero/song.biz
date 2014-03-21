@@ -379,6 +379,10 @@ hr {
 
 	color: #68B287;
 
+	border: none;
+	outline: none;
+	cursor: pointer;
+
 	position: absolute;
 	left: 15px;
 	top: 20px;
