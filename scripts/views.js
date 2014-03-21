@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 	searchfilter="";
-	activecollection = -1;
+	activecollection = 1;
 
 	setTimeout(trylogin, 200);
 	setTimeout(getSearchResults, 200);
@@ -44,44 +44,15 @@ function populateUserCollections() {
 	var collections = model.getUserById(userid).getCollections();
 	var roof = collections.length;
 
-	var flag;
-	if(activecollection === -1) { flag = true; }
-
 	for(var i=0; i<roof; i++) {
 		var coll = model.getCollectionById(collections[i]);
 
 		var mystring = '<div data-collectionid="'+coll.getId()+'" class="usercollection';
-		if(flag) {
-			mystring += ' selected';
-			activecollection = coll.getId();
-			flag = false;
-		}
-		else if (activecollection === coll.getId()) {
-			mystring += ' selected';
-		}
-		mystring += '"><h1 class="lightred">'+coll.getTitle().toUpperCase()+'</h1><h2 class="darkred">'+coll.getSubtitle()+'</h2></div>'
+		mystring += (activecollection === coll.getId() ? ' selected' : '');
+		mystring += '"><h1 class="lightred">'+coll.getTitle().toUpperCase()+'</h1><h2 class="darkred">'+coll.getSubtitle()+'</h2></div>';
+
 		$('#usercollections').append(mystring);
 	}
-
-	/*var roof = model.collections.length;
-	var flag;
-	if(activecollection === -1) { flag = true; }
-	for(var i=0; i<roof; i++) {
-		if(model.collections[i].getCreator() === userid) {
-			var mystring = '<div data-collectionid="'+model.collections[i].getId()+'" class="usercollection';
-			if(flag) {
-				mystring += ' selected';
-				activecollection = model.collections[i].getId();
-				flag = false;
-			}
-			else if (activecollection === model.collections[i].getId()) {
-				mystring += ' selected';
-			}
-			mystring += '"><h1 class="lightred">'+model.collections[i].getTitle().toUpperCase()+'</h1><h2 class="darkred">'+model.collections[i].getSubtitle()+'</h2></div>'
-			$('#usercollections').append(mystring);
-		}
-	}*/
-
 
 	$('.usercollection').click(function () {
 		$('.usercollection').removeClass('selected');
@@ -92,13 +63,23 @@ function populateUserCollections() {
 }
 
 function updateActiveCollection() {
-	var roof = model.collections.length;
-	var flag = true;
-	for(var i=0; i<roof; i++) {
-		if(model.collections[i].getId() === activecollection) {
-			$('#current_collection').html(model.collections[i].getTitle());
-		}
-	}
+	$('#collectionsongs').html('');
+
+	var coll = model.getCollectionById(activecollection);
+	$('#current_collection').html(coll.getTitle());
+	var songs = coll.getSongs();
+
+	songs.forEach(function (songid) {
+		var song = model.getSongById(songid);
+		var mystring = '<div class="small card collsongcard"><h1>'+song.getTitle()+'</h1></div>';
+		$('#collectionsongs').append(mystring);
+	});
+
+	$('.collsongcard').draggable({ revert: "invalid", containment: "document" });
+	$('#collectionsongs').droppable({ accept: ".card.song", drop: function (event, ui) {
+		model.getCollectionById(activecollection).addSong(parseInt(ui.draggable.attr('data-songid')));
+		$('#collectionsongs').fadeOut(100, function () { update(); $('#collectionsongs').fadeIn(100); });
+	} });
 }
 
 function getSearchResults() {
@@ -110,7 +91,7 @@ function getSearchResults() {
 		var roof = model.songs.length;
 		for(var i=0; i<roof; i++) {
 			if(model.songs[i].getComposer().toLowerCase().indexOf(searchfilter) != -1 || model.songs[i].getLyrics().toLowerCase().indexOf(searchfilter) != -1 || model.songs[i].getMelody().toLowerCase().indexOf(searchfilter) != -1 || model.songs[i].getTitle().toLowerCase().indexOf(searchfilter) != -1 || model.songs[i].getType().toLowerCase().indexOf(searchfilter) != -1) {
-				$('#searchresults').append('<div data-songid="'+i+'" class="card song"><h1>'+model.songs[i].getTitle()+'</h1><div class="more"><h2>Kompositör: '+model.songs[i].getComposer()+'<br> Melodi: '+model.songs[i].getMelody()+'</h2><p>'+model.songs[i].getLyrics()+'</p></div></div>');
+				$('#searchresults').append('<div data-songid="'+model.songs[i].getId()+'" class="card song"><h1>'+model.songs[i].getTitle()+'</h1><div class="more"><h2>Kompositör: '+model.songs[i].getComposer()+'<br> Melodi: '+model.songs[i].getMelody()+'</h2><p>'+model.songs[i].getLyrics()+'</p></div></div>');
 			}
 		}
 	}
@@ -130,10 +111,10 @@ function getSearchResults() {
 			}
 		}
 	}
-	$('.card.song').draggable({ revert: true, helper: "clone", start: function(e, ui) { $(ui.helper).addClass("ui-draggable-helper"); } });
+	$('.card.song').draggable({ revert: "invalid", helper: "clone", start: function(e, ui) { $(ui.helper).addClass("ui-draggable-helper"); } });
 	$('.card.song').draggable("option", "cursorAt", { left: 5 });
 
-	$('.card.collection').draggable({ revert: true, helper: "clone", start: function(e, ui) { $(ui.helper).addClass("ui-draggable-helper"); } });
+	$('.card.collection').draggable({ revert: "invalid", helper: "clone", start: function(e, ui) { $(ui.helper).addClass("ui-draggable-helper"); } });
 	$('.card.collection').draggable("option", "cursorAt", { left: 5 });
 
 	$('.card').click(function () {
@@ -184,7 +165,7 @@ function fillBrowse() {
 		
 	}
 
-	$('.card.song').draggable({ revert: true, helper: "clone", start: function(e, ui) { $(ui.helper).addClass("ui-draggable-helper"); } });
+	$('.card.song').draggable({ revert: "invalid", helper: "clone", start: function(e, ui) { $(ui.helper).addClass("ui-draggable-helper"); } });
 	$('.card.song').draggable("option", "cursorAt", { left: 5 });
 
 	$('.card').click(function () {

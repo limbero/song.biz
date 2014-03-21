@@ -325,12 +325,38 @@ hr {
 }
 .ui-draggable-helper h1 {
 	font-size: 1em;
+	width: 100%;
 }
 .ui-draggable-helper h2, .ui-draggable-helper p {
 	display: none;
 }
 
 /*MIDDLE RIGHT*/
+
+#b3 {
+	vertical-align: top;
+}
+
+#collectionsongs {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden; 
+	overflow-y: auto;
+}
+
+.small.card {
+	width: 250px;
+}
+.small.card h1 {
+	font-size: 1em;
+	width: 100%;
+}
+.small.card h2, .small.card p {
+	display: none;
+}
+
 /*BOTTOM LEFT*/
 #c1 {
 	height: 110px;

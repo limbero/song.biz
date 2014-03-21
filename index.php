@@ -82,7 +82,7 @@ else if($_GET["login"]=="1") {
                </td>
                <!-- MIDDLE RIGHT -->
                <td id="b3">
-
+                    <div id="collectionsongs"></div>
                </td>
            </tr>
            <tr>
@@ -102,6 +102,7 @@ else if($_GET["login"]=="1") {
             <!-- BOTTOM RIGHT -->
             <td id="c3">
                 <hr>
+                <div id="trash"></div>
             </td>
         </tr>
     </tbody>
