@@ -23,9 +23,16 @@ $(document).ready(function () {
 		var subtitle = $('#collectionDescription').val();
 		var collectionId = model.getHighestCollectionId() + 1;
 
-		model.addCollection(collectionId, title, subtitle, userid, true);
-		model.addCollectionToUser(userid, collectionId);
-		update();
+		if (title !== "" || subtitle !== "") {
+			model.addCollection(collectionId, title, subtitle, userid, true);
+			model.addCollectionToUser(userid, collectionId);
+			update();
+
+			// reset input
+			$('#collectionName').val("");
+			$('#collectionDescription').val("");
+		}
+
 	});
 });
 
