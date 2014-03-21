@@ -5,6 +5,7 @@ if($_GET["logout"]=="1") {
 else if($_GET["login"]=="1") {
     setcookie("user", "bratzie", time()+86400);
 }
+
 ?>
 <!DOCTYPE html>
 <html>

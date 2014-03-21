@@ -1,6 +1,26 @@
 //JavaScript Document
 
 /***************************************
+Execute on start
+***************************************/
+
+// this is the instance of the main model
+var model = new Model();
+
+$.get('scripts/isConnected.php', {}).done(function(status) {
+	if(status != 'connected') {
+		createTestData();
+	}else{
+		$.get('scripts/loadAll.php', { table: 'songs'}).done(function(data) {
+			alert(data);
+		});
+	}
+});
+
+
+
+
+/***************************************
 Songs
 ***************************************/
 
@@ -434,13 +454,15 @@ function Model () {
 	//*** END OBSERVABLE PATTERN ***
 }
 
-// this is the instance of the main model
-var model = new Model();
-createTestData();
+
+/*********************************************
+Mock Data
+*********************************************/
 
 // This method can be used to create some test data and test your implementation
 // This should not be used in the final version.
 function createTestData() {
+
 
 	console.log("Creating mockup data via JSON files!");
 
