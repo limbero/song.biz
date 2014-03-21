@@ -31,6 +31,7 @@ else if($_GET["login"]=="1") {
                 </td>
                 <!-- TOP MIDDLE -->
                 <td id="a2">
+                    <div id="logo" style="text-align: center; padding: 8px;"><img src="./resources/songbiz.png" width="500px"></div>
                     <div id="searchFieldArea" class="search">
                         <input id="searchField" type="text">
                     </div>
