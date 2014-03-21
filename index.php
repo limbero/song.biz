@@ -90,11 +90,9 @@ else if($_GET["login"]=="1") {
             <!-- BOTTOM LEFT -->
             <td id="c1">
                 <hr>
-                <form id="createColl">
                 <button id="addBtn">+</button>
                 <input id="collectionName" type="text" name="collName" placeholder="Name"><br>
                 <input id="collectionDescription" type="text" name="collDesc" placeholder="Description">
-                </form>
             </td>
             <!-- BOTTOM MIDDLE -->
             <td id="c2">

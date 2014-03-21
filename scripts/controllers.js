@@ -18,7 +18,12 @@ $(document).ready(function () {
 	});
 
 	$('#addBtn').click(function () {
-		addNewCollection();
+		var title = $('#collectionName');
+		var subtitle = $('#collectionDescription');
+		var collectionId = model.getHighestCollectionId() + 1;
+
+		model.addCollection(collectionId, title, subtitle, current_user, true);
+		model.addCollectionToUser(current_user, collectionId);
 	});
 });
 

@@ -377,6 +377,37 @@ function Model () {
 		}
 	}
 
+	/* GET HIGHEST ID */
+	this.getHighestSongId = function () {
+		var i = 0;
+		var max;
+		while (this.songs[i] != null) {
+			max = (this.songs[i].getId() > max ? this.songs[i].getId() : max);
+			i++;
+		}
+		return max;
+	}
+
+	this.getHighestCollectionId = function () {
+		var i = 0;
+		var max;
+		while (this.collections[i] != null) {
+			max = (this.collections[i].getId() > max ? this.collections[i].getId() : max);
+			i++;
+		}
+		return max;
+	}
+
+	this.getHighestUserId = function () {
+		var i = 0;
+		var max;
+		while (this.users[i] != null) {
+			max = (this.users[i].getId() > max ? this.users[i].getId() : max);
+			i++;
+		}
+		return max;
+	}
+
 	/* CLEARING MODEL AND DATABASE */
 	this.clearModel = function () {
 		this.songs = [];

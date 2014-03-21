@@ -178,25 +178,4 @@ function fillBrowse() {
 	$('.browse .card').click(function () {
 		$('.more', this).slideToggle(100);
 	});
-
 }
-
-function addNewCollection() {
-	var name = $('#collectionName');
-	var description = $('#collectionDescription');
-
-	// create a new collection object
-	model.workingCollection.setName(name);
-	console.log(name);
-	model.workingCollection.setDescription(description);
-	console.log(description);
-	model.workingCollection.setCreator(user.getTitle());
-	model.workingCollection.setIsPublic(true);
-	//model.workingCollection = new Collection(name, description, [], user.getTitle(), true); 
-	console.log(model.workingCollection);
-	model.addCollection();
-}
-
-
-
-
