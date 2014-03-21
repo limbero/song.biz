@@ -95,30 +95,25 @@ function Collection(id, title, subtitle, creator, isPublic) {
 		model.notifyObservers();
 	}
 
-	this.getId = function() {
-		return _id;
-	}
+	this.getId = function() { return _id; }
 
 	this.setTitle = function(title) {
 		_title = title;
 		model.notifyObservers();
 	}
 
-	this.getTitle = function() {
-		return _title;
-	}
+	this.getTitle = function() { return _title; }
 
 	this.setSubtitle = function(subtitle) {
 		_subtitle = subtitle;
 		model.notifyObservers();
 	}
 
-	this.getSubtitle = function() {
-		return _subtitle;
-	}
+	this.getSubtitle = function() { return _subtitle; }
 
 	this.addSong = function(songid) {
 		_songs.push(songid);
+		console.log("Song " + songid + " added to collection " + this.getId());
 		model.notifyObservers();
 	}
 
@@ -126,6 +121,7 @@ function Collection(id, title, subtitle, creator, isPublic) {
 		var index = _songs.indexOf(songid);
 		if(index > -1) {
 			_songs.splice(index,1);
+			console.log("Song " + songid + " removed from collection " + this.getId());
 			model.notifyObservers();
 		}
 	}
@@ -135,27 +131,21 @@ function Collection(id, title, subtitle, creator, isPublic) {
 		model.notifyObservers();
 	}
 
-	this.getSongs = function() {
-		return _songs;
-	}
+	this.getSongs = function() { return _songs;	}
 
 	this.setCreator = function(creator) {
 		_creator = creator;
 		model.notifyObservers();
 	}
 
-	this.getCreator = function() {
-		return _creator;
-	}
+	this.getCreator = function() { return _creator; }
 
 	this.setIsPublic = function(isPublic) {
 		_isPublic = isPublic;
 		model.notifyObservers();
 	}
 
-	this.getIsPublic = function() {
-		return _isPublic;
-	}
+	this.getIsPublic = function() { return _isPublic; }
 
 	this.clear = function() {
 		this.setName = "";
@@ -221,10 +211,21 @@ function User(id, username, firstname, surname, joined, password) {
 
 	this.getPassword = function() {	return _password; }
 
-	// used to add collectionid to this user
+	// used to add a collectionid to this user
 	this.addCollection = function(collectionid) {
 		_collections.push(collectionid);
+		console.log("Collection " + collectionid + " added to user " + this.getUsername());
 		model.notifyObservers();
+	}
+
+	// used to remove a collectionid from this user
+	this.removeCollection = function(collectionid) {
+		var index = _collections.indexOf(collectionid);
+		if(index > -1) {
+			_collections.splice(index,1);
+			console.log("Collection " + collectionid + " removed from user " + this.getUsername());
+			model.notifyObservers();
+		}
 	}
 
 	this.getCollections = function() { return _collections; }
@@ -256,6 +257,8 @@ function Model () {
 		var song = new Song(id, title, lyrics, _melody, _composer, type);
 		this.songs.push(song);
 		this.notifyObservers();
+
+		// SAVE THIS TO DATABASE!
 	}
 
 	this.addCollection = function (id, title, subtitle, creator, isPublic) {
@@ -273,36 +276,60 @@ function Model () {
 		var collection = new Collection(id, title, _subtitle, _creator, _isPublic);
 		this.collections.push(collection);
 		this.notifyObservers();
+
+		// SAVE THIS TO DATABASE!
 	}
 
 	this.addSongToCollection = function (collectionid, songid) {
-		var index = this.collections.indexOf(collectionid);
-		if(index > -1) { // make sure collection exists
-			this.collections[index].addSong(songid);
-			console.log("Song: " + songid + " WAS added to collection: " + collectionid);
-			this.notifyObservers();
-		} else {
-			console.log("Song: " + songid + " NOT added to collection: " + collectionid + ", collection does not exist!");
+		var i = 0;
+		while (this.collections[i] != null) {
+			if (this.collections[i].getId() === collectionid) {
+				this.collections[i].addSong(songid);
+				break; // song added, we can take a break, chill and stuff.
+			} 
+			i++;
 		}
+
+		// SAVE THIS TO DATABASE!
 	}
 
 	this.removeSongFromCollection = function (collectionid, songid) {
-		var index = this.collections.indexOf(collectionid);
-		if(index > -1) { // make sure collection exists
-			this.collections[index].removeSong(songid);
-			console.log("Song: " + songid + " WAS removed from collection: " + collectionid);
-			this.notifyObservers();
-		} else {
-			console.log("Song: " + songid + " NOT removed from collection: " + collectionid + ", collection does not exist!");
+		var i = 0;
+		while (this.collections[i] != null) {
+			if (this.collections[i].getId() === collectionid) {
+				this.collections[i].removeSong(songid);
+				break; // song removed, we can take a break, chill and stuff.
+			} 
+			i++;
 		}
+
+		// SAVE THIS TO DATABASE!
 	}
 
 	this.addCollectionToUser = function (userid, collectionid) {
+		var i = 0;
+		while (this.users[i] != null) {
+			if (this.users[i].getId() === userid) {
+				this.users[i].addCollection(collectionid);
+				break; // collection added, we can take a break, chill and stuff.
+			} 
+			i++;
+		}
 
+		// SAVE THIS TO DATABASE!
 	}
 
 	this.removeCollectionFromUser = function (userid, collectionid) {
+		var i = 0;
+		while (this.users[i] != null) {
+			if (this.users[i].getId() === userid) {
+				this.users[i].removeCollection(collectionid);
+				break; // collection added, we can take a break, chill and stuff.
+			} 
+			i++;
+		}
 
+		// SAVE THIS TO DATABASE!
 	}
 
 	this.addUser = function (id, username, firstname, surname, password) {
@@ -313,6 +340,18 @@ function Model () {
 		var user = new User(id, username, firstname, surname, now, password);
 		this.users.push(user);
 		this.notifyObservers;
+
+		// SAVE THIS TO DATABASE!
+	}
+
+	this.clearModel = function () {
+		this.songs = [];
+		this.users = [];
+		this.collections = [];
+
+		this.notifyObservers();
+
+		// SAVE THIS TO DATABASE!
 	}
 
 	//*** OBSERVABLE PATTERN ***
@@ -336,11 +375,13 @@ createTestData();
 
 // This method can be used to create some test data and test your implementation
 // This should not be used in the final version.
-function createTestData(){
+function createTestData() {
+
+	console.log("Creating mockup data via JSON files!");
 
 	// import JSON and add songs to model
 	$.getJSON( "./db/songs.json", function( songs ) {
-		console.log(songs);
+		//console.log(songs);
 		var i = 0;
 		while(songs.songs[i] != null) {
 			var song = songs.songs[i];
@@ -351,7 +392,7 @@ function createTestData(){
 	});
 
 	$.getJSON( "./db/users.json", function( users ) {
-		console.log(users);
+		//console.log(users);
 		var i = 0;
 		while(users.users[i] != null) {
 			var user = users.users[i];
@@ -362,7 +403,7 @@ function createTestData(){
 	});
 
 	$.getJSON( "./db/collections.json", function( collections ) {
-		console.log(collections);
+		//console.log(collections);
 		var i = 0;
 		while(collections.collections[i] != null) {
 			var collection = collections.collections[i];
@@ -373,11 +414,21 @@ function createTestData(){
 	});
 
 	$.getJSON( "./db/cslinks.json", function( cslinks ) {
-		console.log(cslinks);
+		//console.log(cslinks);
 		var i = 0;
 		while(cslinks.cslinks[i] != null) {
 			var cslink = cslinks.cslinks[i];
 			model.addSongToCollection(cslink.collectionid, cslink.songid);
+			i++;
+		}
+	});
+
+	$.getJSON( "./db/uclinks.json", function( uclinks ) {
+		//console.log(uclinks);
+		var i = 0;
+		while(uclinks.uclinks[i] != null) {
+			var uclink = uclinks.uclinks[i];
+			model.addCollectionToUser(uclink.userid, uclink.collectionid);
 			i++;
 		}
 	});
