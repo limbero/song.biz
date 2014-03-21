@@ -83,7 +83,6 @@ else {
                 </td>
                 <!-- MIDDLE MIDDLE -->
                 <td id="b2">
-                    <button id="addSongBtn">+</button>
                     <!--Search-->
                     <div id="searchresults" class="search">
                     </div>
@@ -103,22 +102,22 @@ else {
                     </div>
                     <!--Browse-->
                     <div id="browse" class="browse" style="display:none;" class="row">
-                     <h2>Student</h2>
-                     <div id="browseStudent">
+                       <h2>Student</h2>
+                       <div id="browseStudent">
 
-                     </div>
-                     <h2>Party</h2>
-                     <div id="browseParty">
+                       </div>
+                       <h2>Party</h2>
+                       <div id="browseParty">
 
-                     </div>
-                     <h2>National Anthem</h2>
-                     <div id="browseNa">
+                       </div>
+                       <h2>National Anthem</h2>
+                       <div id="browseNa">
 
-                     </div>
-                 </div>
-             </td>
-             <!-- MIDDLE RIGHT -->
-             <td id="b3">
+                       </div>
+                   </div>
+               </td>
+               <!-- MIDDLE RIGHT -->
+               <td id="b3">
                 <div id="collectionsongs"></div>
             </td>
         </tr>
@@ -132,6 +131,9 @@ else {
             </td>
             <!-- BOTTOM MIDDLE -->
             <td id="c2">
+                <div id="c2Add">
+                    <button id="addSongBtn">+</button>
+                </div>
 
             </td>
             <!-- BOTTOM RIGHT -->

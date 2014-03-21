@@ -365,23 +365,6 @@ hr {
 	display: none;
 }
 
-#addSongBtn {
-	background: none;
-	border: none;
-
-	font-weight: 700;
-	font-size: 3.25em;
-
-	color: #B25C56;
-	margin-top: 0px;
-
-	border: none;
-	outline: none;
-	cursor: pointer;
-
-	float: right;
-
-}
 
 #overlay {
 	position: absolute;
@@ -489,6 +472,30 @@ hr {
 /*BOTTOM MIDDLE*/
 #c2 {
 	background: #FFB3AE;
+}
+
+#c2Add {
+	display: block;
+    margin: 0 auto;
+	text-align: center;
+}
+
+#addSongBtn {
+	background: none;
+	border: none;
+
+	font-weight: 700;
+	font-size: 3.25em;
+
+	color: #B25C56;
+	margin-top: 0px;
+
+	border: none;
+	outline: none;
+	cursor: pointer;
+
+	float: none;
+
 }
 
 /*BOTTOM RIGHT*/
