@@ -3,13 +3,13 @@
 		"collectionid": 1,
 		"title": "Collection 1",
 		"subtitle": "Subtitle of Collection 1",
-		"creator": 0,
+		"creator": 5,
 		"ispublic": true
 	}, {
 		"collectionid": 2,
 		"title": "Collection 2",
 		"subtitle": "Subtitle of Collection 2",
-		"creator": 0,
+		"creator": 4,
 		"ispublic": true
 	}, {
 		"collectionid": 3,
@@ -21,6 +21,24 @@
 		"collectionid": 4,
 		"title": "Collection 4",
 		"subtitle": "Subtitle of Collection 4",
+		"creator": 1,
+		"ispublic": true
+	}, {
+		"collectionid": 5,
+		"title": "Collection 5",
+		"subtitle": "Subtitle of Collection 5",
+		"creator": 2,
+		"ispublic": true
+	}, {
+		"collectionid": 6,
+		"title": "Collection 6",
+		"subtitle": "Subtitle of Collection 6",
+		"creator": 2,
+		"ispublic": true
+	}, {
+		"collectionid": 7,
+		"title": "Collection 7",
+		"subtitle": "Subtitle of Collection 7",
 		"creator": 2,
 		"ispublic": true
 	} ]
