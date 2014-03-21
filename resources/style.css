@@ -94,6 +94,21 @@ hr {
 	box-shadow: -20px 0px 10px -10px rgba(0, 0, 0, 0.5) inset;
 }
 
+#user input {
+	height: 20px;
+	width: 90px;
+
+	margin: 5px;
+
+	border: 1px solid #CCC;
+	border-radius: 5px;
+
+	padding: 3px 10px;
+
+	position: relative;
+	left: 7px;
+}
+
 #user, #user_thing {
 	margin-right: 10px;
 

@@ -51,7 +51,7 @@ function trylogin() {
 	}
 
 	if(!flag) {
-		$('#user').html("");
+		$('#user').html('<input id="userfield" name="user" type="text" placeholder="Username"><input id="passfield" name="password" type="password" placeholder="Password">');
 		$('#user_thing').html("LOGIN");
 	}
 }

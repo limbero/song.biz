@@ -37,10 +37,10 @@ $(document).ready(function () {
 
 	$('#user_thing').click(function () {
 		if(current_user == "") {
-			console.log('logging in');
+			window.location.href = "?user="+$('#userfield').val()+"?password="+$('#passfield').val();
 		}
 		else {
-			console.log('logging out');
+			window.location.href = "?logout=1";
 		}
 	});
 });
