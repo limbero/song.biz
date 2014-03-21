@@ -41,7 +41,29 @@ function trylogin() {
 function populateUserCollections() {
 	$('#usercollections').html('');
 
-	var roof = model.collections.length;
+	var collections = model.getUserById(userid).getCollections();
+	var roof = collections.length;
+
+	var flag;
+	if(activecollection === -1) { flag = true; }
+
+	for(var i=0; i<roof; i++) {
+		var coll = model.getCollectionById(collections[i]);
+
+		var mystring = '<div data-collectionid="'+coll.getId()+'" class="usercollection';
+		if(flag) {
+			mystring += ' selected';
+			activecollection = coll.getId();
+			flag = false;
+		}
+		else if (activecollection === coll.getId()) {
+			mystring += ' selected';
+		}
+		mystring += '"><h1 class="lightred">'+coll.getTitle().toUpperCase()+'</h1><h2 class="darkred">'+coll.getSubtitle()+'</h2></div>'
+		$('#usercollections').append(mystring);
+	}
+
+	/*var roof = model.collections.length;
 	var flag;
 	if(activecollection === -1) { flag = true; }
 	for(var i=0; i<roof; i++) {
@@ -58,7 +80,7 @@ function populateUserCollections() {
 			mystring += '"><h1 class="lightred">'+model.collections[i].getTitle().toUpperCase()+'</h1><h2 class="darkred">'+model.collections[i].getSubtitle()+'</h2></div>'
 			$('#usercollections').append(mystring);
 		}
-	}
+	}*/
 
 
 	$('.usercollection').click(function () {
