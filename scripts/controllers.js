@@ -5,7 +5,6 @@ $(document).ready(function () {
 
 	$('#browseBtn').click(function () {
 		swapMiddleView('browse');
-		fillBrowse();
 	});
 
 	$('#searchBtn').click();

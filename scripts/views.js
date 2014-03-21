@@ -5,6 +5,7 @@ $(document).ready(function () {
 
 	setTimeout(trylogin, 200);
 	setTimeout(getSearchResults, 200);
+	setTimeout(fillBrowse, 200);
 	setTimeout(populateUserCollections, 400);
 	setTimeout(updateActiveCollection, 500);
 
