@@ -17,17 +17,13 @@ $.get('scripts/isConnected.php', {}).done(function(status) {
 	}
 });
 
-
-
-
 /***************************************
 Songs
 ***************************************/
 
 // This is the song constructor
 // If you want to create a new song call
-// var song = new Song(1, "song title", "det här är en fin sång", "valfri", "some dude", "snapsvisa")
-// The type is allowed to be null
+// var song = new Song(id (int), "title" (string), "lyrics" (string), "melody" (string), "composer" (string), "type/genre" (string))
 function Song(id, title, lyrics, melody, composer, type){
 
 	var _id = id; // int
@@ -35,61 +31,49 @@ function Song(id, title, lyrics, melody, composer, type){
 	var _lyrics = lyrics; // String
 	var _melody = melody; // String
 	var _composer = composer; // String
-	var _type = type; // String or enum (?)
+	var _type = type; // String
 
-	this.setId = function(id){
+	this.setId = function(id) {
 		_id = id;
 		model.notifyObservers();
 	}
 
-	this.getId = function(){
-		return _id;
-	}
+	this.getId = function() { return _id; }
 
-	this.setTitle = function(title){
+	this.setTitle = function(title) {
 		_title = title;
 		model.notifyObservers();
 	}
 
-	this.getTitle = function(){
-		return _title;
-	}
+	this.getTitle = function() { return _title; }
 
-	this.setLyrics = function(lyrics){
+	this.setLyrics = function(lyrics) {
 		_lyrics = lyrics;
 		model.notifyObservers();
 	}
 
-	this.getLyrics = function(){
-		return _lyrics;
-	}
+	this.getLyrics = function() { return _lyrics; }
 
-	this.setMelody = function(melody){
+	this.setMelody = function(melody) {
 		_melody = melody;
 		model.notifyObservers();
 	}
 
-	this.getMelody = function(){
-		return _melody;
-	}
+	this.getMelody = function() { return _melody; }
 
-	this.setComposer = function(composer){
+	this.setComposer = function(composer) {
 		_composer = composer;
 		model.notifyObservers();
 	}
 
-	this.getComposer = function(){
-		return _composer;
-	}
+	this.getComposer = function() { return _composer; }
 
-	this.setType = function(type){
+	this.setType = function(type) {
 		_type = type;
 		model.notifyObservers();
 	}
 
-	this.getType = function(){
-		return _type;
-	}
+	this.getType = function() {	return _type; }
 }
 
 
@@ -99,7 +83,7 @@ Collections
 
 // This is the Collection constructor
 // If you want to create a new collection call
-// var collection = new Collection(1, My Collection", "this is awesum", user.getId(), true)
+// var collection = new Collection(id (int), "title" (string), "subtitle" (string), creator (int), isPublic (bool))
 function Collection(id, title, subtitle, creator, isPublic) {
 
 	var _id = id; // int
@@ -181,8 +165,8 @@ Users
 ***************************************/
 
 // This is the User constructor
-// If you want to create a new collection call
-// var user = new User("Username", "Firstname", "Surname", "2014-03-14", "Password")
+// If you want to create a new user call
+// var user = new User("username" (string), "firstname" (string), "surname" (string), "2014-03-14" (Date), "password" (string))
 function User(id, username, firstname, surname, joined, password) {
 
 	var _id = id; // id
@@ -265,7 +249,7 @@ function Model () {
 	this.users = [];
 
 	/* ADDING SONGS/COLLECTIONS/USERS */
-	this.addSong = function (id, title, lyrics, melody, composer, type){
+	this.addSong = function (id, title, lyrics, melody, composer, type) {
 		var _melody;
 		var _composer;
 		if(!id || !title || !lyrics) {
@@ -479,13 +463,13 @@ function createTestData() {
 	});
 
 	$.getJSON( "./db/users.json", function( users ) {
-		//console.log(users);
+		console.log(users);
 		var i = 0;
 		while(users.users[i] != null) {
 			var user = users.users[i];
 			model.addUser(user.userid, user.username, user.firstname, user.surname, user.password);
 			i++;
-			//console.log(user.userid + ": " + user.username + " added!");
+			console.log(user.userid + ": " + user.username + " added!");
 		}
 	});
 

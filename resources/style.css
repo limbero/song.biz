@@ -373,7 +373,49 @@ hr {
 	width: 100%;
 	height: 100%;
 	z-index: 10;
+	border: 1px solid #CCC;
+	border-radius: 10px;
 	background-color: rgba(0,0,0,0.5);
+}
+
+#overlay input {
+	height: 20px;
+	width: 200px;
+
+	margin: 5px 30px;
+
+	border: 1px solid #CCC;
+	border-radius: 5px;
+
+	padding: 6px 10px;
+}
+
+#overlay textarea {
+	height: 200px;
+	width: 200px;
+
+	resize: none;
+
+	margin: 5px 30px;
+
+	border: 1px solid #CCC;
+	border-radius: 5px;
+
+	padding: 6px 10px;
+
+	font-family: 'Roboto';
+}
+
+#overlay button {
+	height: 30px;
+	width: 80px;
+
+	margin: 20px 10px;
+
+	border: 1px solid #CCC;
+	border-radius: 5px;
+
+	padding: 6px 10px;
 }
 
 #addSongForm {
@@ -495,7 +537,6 @@ hr {
 	cursor: pointer;
 
 	float: none;
-
 }
 
 /*BOTTOM RIGHT*/
@@ -507,6 +548,7 @@ hr {
 	height: 80%;
 	margin: 7px 0 0 0;
 	padding: 0;
+	opacity: 0.2;
 	overflow-x: hidden; 
 	overflow-y: auto;
 

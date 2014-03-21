@@ -1,3 +1,5 @@
+var userid;
+
 $(document).ready(function () {
 
 	searchfilter="";
@@ -15,16 +17,14 @@ $(document).ready(function () {
 	} });
 
 	$('#trash').droppable({ accept: ".collsongcard", drop: function (event, ui) {
-		$('#trash').css("opacity", "1");
 		model.getCollectionById(activecollection).removeSong(parseInt(ui.draggable.attr('data-songid')));
-		$('#collectionsongs').fadeOut(100, function () { update(); $('#collectionsongs').fadeIn(100);});
-		$('#trash').css("opacity", "0.2");
+		$('#collectionsongs').fadeOut(100, function () { update(); $('#collectionsongs').fadeIn(100); $('#trash').css("opacity", "0.2");});
 	} });
 
 	// Make collections dropable
 	$('#usercollections').droppable({ accept: ".card.collection", drop: function (event, ui) {
 		model.addCollectionToUser(userid,parseInt(ui.draggable.attr('data-collectionid')))
-		$('#usercollections').fadeOut(100, function () { update(); $('#usercollections').fadeIn(100); });
+		$('#usercollections').fadeOut(100, function () { update(); $('#usercollections').fadeIn(100);});
 	} });
 });
 
@@ -59,30 +59,33 @@ function trylogin() {
 function populateUserCollections() {
 	$('#usercollections').html('');
 
-	var collections = model.getUserById(userid).getCollections();
-	var roof = collections.length;
+	if(userid) {
+		var collections = model.getUserById(userid).getCollections();
+		var roof = collections.length;	
+	
+	
+		for(var i=0; i<roof; i++) {
+			var coll = model.getCollectionById(collections[i]);
 
-	for(var i=0; i<roof; i++) {
-		var coll = model.getCollectionById(collections[i]);
+			var mystring = '<div data-collectionid="'+coll.getId()+'" class="usercollection';
+			mystring += (activecollection === coll.getId() ? ' selected' : '');
+			mystring += '"><button class="deletecollection">x</button><h1 class="lightred">'+coll.getTitle().toUpperCase()+'</h1><h2 class="darkred">'+coll.getSubtitle()+'</h2></div>';
 
-		var mystring = '<div data-collectionid="'+coll.getId()+'" class="usercollection';
-		mystring += (activecollection === coll.getId() ? ' selected' : '');
-		mystring += '"><button class="deletecollection">x</button><h1 class="lightred">'+coll.getTitle().toUpperCase()+'</h1><h2 class="darkred">'+coll.getSubtitle()+'</h2></div>';
+			$('#usercollections').append(mystring);
+		}
 
-		$('#usercollections').append(mystring);
+		$('.usercollection').click(function () {
+			$('.usercollection').removeClass('selected');
+			$(this).addClass('selected');
+			activecollection = parseInt($(this).attr('data-collectionid'));
+			update();
+		});
+
+		$('.deletecollection').click(function () {
+			model.removeCollectionFromUser(userid, parseInt($(this).parent().attr('data-collectionid')));
+			update();
+		});
 	}
-
-	$('.usercollection').click(function () {
-		$('.usercollection').removeClass('selected');
-		$(this).addClass('selected');
-		activecollection = parseInt($(this).attr('data-collectionid'));
-		update();
-	});
-
-	$('.deletecollection').click(function () {
-		model.removeCollectionFromUser(userid, parseInt($(this).parent().attr('data-collectionid')));
-		update();
-	});
 }
 
 function updateActiveCollection() {
@@ -155,7 +158,6 @@ function fillBrowse() {
 				count++;
 			}
 		}
-		
 	}
 
 	$('#browseParty').html('');
@@ -168,7 +170,6 @@ function fillBrowse() {
 				count++;
 			}
 		}
-		
 	}
 
 	$('#browseNa').html('');
@@ -181,7 +182,6 @@ function fillBrowse() {
 				count++;
 			}
 		}
-		
 	}
 
 	$('.card.song').draggable({ revert: "invalid", helper: "clone", start: function(e, ui) { $(ui.helper).addClass("ui-draggable-helper"); } });

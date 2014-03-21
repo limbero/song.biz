@@ -32,9 +32,9 @@ else {
 <head>
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="resources/newnote.png">
-    <title>SÅNGBOK</title>
+    <title>song.biz</title>
 
-    <!-- Bootstrap CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="resources/style.css">
 </head>
 <!-- MAIN VIEW -->
@@ -89,9 +89,9 @@ else {
                     <!--Overlay-->
                     <div id="overlay" style="display:none">
                         <div id="addSongForm">
-                            <h4>Add a song</h4>
+                            <h4>ADD A SONG</h4>
                             <input id="songTitle" type="text" name="songTitle" placeholder="Title"><br>
-                            <textarea id="songLyrics" rows="10" columns="50" placeholder="Lyrics"></textarea><br>
+                            <textarea id="songLyrics" placeholder="Lyrics"></textarea><br>
                             <!-- <input id="songLyrics" type="text" name="songLyrics" placeholder="Lyrics"><br> -->
                             <input id="songMelody" type="text" name="songMelody" placeholder="Melody"><br>
                             <input id="songComposer" type="text" name="songComposer" placeholder="Composer"><br>
@@ -134,7 +134,6 @@ else {
                 <div id="c2Add">
                     <button id="addSongBtn">+</button>
                 </div>
-
             </td>
             <!-- BOTTOM RIGHT -->
             <td id="c3">

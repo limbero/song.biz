@@ -34,5 +34,12 @@
 		"surname": "Folke",
 		"registered": "Today",
 		"password": "123456"
+	}, {
+		"userid": 6,
+		"username": "fkis",
+		"firstname": "Filip",
+		"surname": "Kis",
+		"registered": "Today",
+		"password": "admin"
 	} ]
 }
