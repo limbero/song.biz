@@ -37,7 +37,7 @@ $(document).ready(function () {
 
 	$('#user_thing').click(function () {
 		if(current_user == "") {
-			window.location.href = "?user="+$('#userfield').val()+"?password="+$('#passfield').val();
+			window.location.href = "?user="+$('#userfield').val()+"&password="+$('#passfield').val();
 		}
 		else {
 			window.location.href = "?logout=1";
