@@ -18,12 +18,14 @@ $(document).ready(function () {
 	});
 
 	$('#addBtn').click(function () {
-		var title = $('#collectionName');
-		var subtitle = $('#collectionDescription');
+
+		var title = $('#collectionName').val();
+		var subtitle = $('#collectionDescription').val();
 		var collectionId = model.getHighestCollectionId() + 1;
 
-		model.addCollection(collectionId, title, subtitle, current_user, true);
-		model.addCollectionToUser(current_user, collectionId);
+		model.addCollection(collectionId, title, subtitle, userid, true);
+		model.addCollectionToUser(userid, collectionId);
+		update();
 	});
 });
 

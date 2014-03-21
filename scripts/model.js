@@ -380,7 +380,7 @@ function Model () {
 	/* GET HIGHEST ID */
 	this.getHighestSongId = function () {
 		var i = 0;
-		var max;
+		var max = 0;
 		while (this.songs[i] != null) {
 			max = (this.songs[i].getId() > max ? this.songs[i].getId() : max);
 			i++;
@@ -390,7 +390,7 @@ function Model () {
 
 	this.getHighestCollectionId = function () {
 		var i = 0;
-		var max;
+		var max = 0;
 		while (this.collections[i] != null) {
 			max = (this.collections[i].getId() > max ? this.collections[i].getId() : max);
 			i++;
@@ -400,7 +400,7 @@ function Model () {
 
 	this.getHighestUserId = function () {
 		var i = 0;
-		var max;
+		var max = 0;
 		while (this.users[i] != null) {
 			max = (this.users[i].getId() > max ? this.users[i].getId() : max);
 			i++;
