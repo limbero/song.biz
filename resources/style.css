@@ -383,6 +383,41 @@ hr {
 
 }
 
+#overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background-color: rgba(0,0,0,0.5);
+}
+
+#addSongForm {
+	text-align: center;
+	background: #FFB3AE;
+	width: 300px;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid #000;
+	margin-top: 20px;
+}
+
+#addSongForm h4 {
+	color: #b25c56;
+	font-family: 'Roboto Condensed';
+	font-size: 1.25em;
+	font-weight: 200;
+}
+
+#submitSongBtn {
+	background: #b25c56;
+	color: #FFB3AE;
+	font-family: 'Roboto Condensed';
+	margin-top: 7px;
+	margin-bottom: 4px;
+}
+
 /*MIDDLE RIGHT*/
 
 #b3 {
