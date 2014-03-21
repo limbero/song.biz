@@ -66,7 +66,7 @@ function populateUserCollections() {
 
 		var mystring = '<div data-collectionid="'+coll.getId()+'" class="usercollection';
 		mystring += (activecollection === coll.getId() ? ' selected' : '');
-		mystring += '"><h1 class="lightred">'+coll.getTitle().toUpperCase()+'</h1><h2 class="darkred">'+coll.getSubtitle()+'</h2></div>';
+		mystring += '"><button class="deletecollection">x</button><h1 class="lightred">'+coll.getTitle().toUpperCase()+'</h1><h2 class="darkred">'+coll.getSubtitle()+'</h2></div>';
 
 		$('#usercollections').append(mystring);
 	}
@@ -75,6 +75,11 @@ function populateUserCollections() {
 		$('.usercollection').removeClass('selected');
 		$(this).addClass('selected');
 		activecollection = parseInt($(this).attr('data-collectionid'));
+		update();
+	});
+
+	$('.deletecollection').click(function () {
+		model.removeCollectionFromUser(userid, parseInt($(this).parent().attr('data-collectionid')));
 		update();
 	});
 }
