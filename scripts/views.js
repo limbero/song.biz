@@ -75,7 +75,7 @@ function updateActiveCollection() {
 		$('#collectionsongs').append(mystring);
 	});
 
-	$('.collsongcard').draggable({ revert: "invalid", containment: "document" });
+	$('.collsongcard').draggable({ helper: "clone", revert: "invalid", containment: "document" });
 	$('#collectionsongs').droppable({ accept: ".card.song", drop: function (event, ui) {
 		model.getCollectionById(activecollection).addSong(parseInt(ui.draggable.attr('data-songid')));
 		$('#collectionsongs').fadeOut(100, function () { update(); $('#collectionsongs').fadeIn(100); });
@@ -168,7 +168,7 @@ function fillBrowse() {
 	$('.card.song').draggable({ revert: "invalid", helper: "clone", start: function(e, ui) { $(ui.helper).addClass("ui-draggable-helper"); } });
 	$('.card.song').draggable("option", "cursorAt", { left: 5 });
 
-	$('.card').click(function () {
+	$('.browse .card').click(function () {
 		$('.more', this).slideToggle(100);
 	});
 
