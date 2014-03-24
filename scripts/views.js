@@ -53,55 +53,67 @@ function trylogin() {
 	if(!flag) {
 		$('#user').html('<input id="userfield" name="user" type="text" placeholder="Username"><input id="passfield" name="password" type="password" placeholder="Password">');
 		$('#user_thing').html("LOGIN");
+
+		$('#a3').html('');
+		$('#b1').html('');
+		$('#b3').html('');
+		$('#c1').html('');
+		$('#c3').html('');
 	}
 }
 
 function populateUserCollections() {
 	$('#usercollections').html('');
 
-	if(userid) {
-		var collections = model.getUserById(userid).getCollections();
-		var roof = collections.length;	
-	
-	
-		for(var i=0; i<roof; i++) {
-			var coll = model.getCollectionById(collections[i]);
+	if(current_user !== "") {
 
-			var mystring = '<div data-collectionid="'+coll.getId()+'" class="usercollection';
-			mystring += (activecollection === coll.getId() ? ' selected' : '');
-			mystring += '"><button class="deletecollection">x</button><h1 class="lightred">'+coll.getTitle().toUpperCase()+'</h1><h2 class="darkred">'+coll.getSubtitle()+'</h2></div>';
+		if(userid) {
+			var collections = model.getUserById(userid).getCollections();
+			var roof = collections.length;	
 
-			$('#usercollections').append(mystring);
+
+			for(var i=0; i<roof; i++) {
+				var coll = model.getCollectionById(collections[i]);
+
+				var mystring = '<div data-collectionid="'+coll.getId()+'" class="usercollection';
+				mystring += (activecollection === coll.getId() ? ' selected' : '');
+				mystring += '"><button class="deletecollection">x</button><h1 class="lightred">'+coll.getTitle().toUpperCase()+'</h1><h2 class="darkred">'+coll.getSubtitle()+'</h2></div>';
+
+				$('#usercollections').append(mystring);
+			}
+
+			$('.usercollection').click(function () {
+				$('.usercollection').removeClass('selected');
+				$(this).addClass('selected');
+				activecollection = parseInt($(this).attr('data-collectionid'));
+				update();
+			});
+
+			$('.deletecollection').click(function () {
+				model.removeCollectionFromUser(userid, parseInt($(this).parent().attr('data-collectionid')));
+				update();
+			});
 		}
-
-		$('.usercollection').click(function () {
-			$('.usercollection').removeClass('selected');
-			$(this).addClass('selected');
-			activecollection = parseInt($(this).attr('data-collectionid'));
-			update();
-		});
-
-		$('.deletecollection').click(function () {
-			model.removeCollectionFromUser(userid, parseInt($(this).parent().attr('data-collectionid')));
-			update();
-		});
 	}
 }
 
 function updateActiveCollection() {
 	$('#collectionsongs').html('');
 
-	var coll = model.getCollectionById(activecollection);
-	$('#current_collection').html(coll.getTitle());
-	var songs = coll.getSongs();
+	if(current_user !== "") {
 
-	songs.forEach(function (songid) {
-		var song = model.getSongById(songid);
-		var mystring = '<div data-songid="'+song.getId()+'" class="small card collsongcard"><h1>'+song.getTitle()+'</h1></div>';
-		$('#collectionsongs').append(mystring);
-	});
+		var coll = model.getCollectionById(activecollection);
+		$('#current_collection').html(coll.getTitle());
+		var songs = coll.getSongs();
 
-	$('.collsongcard').draggable({ helper: "clone", revert: "invalid", containment: "document" });
+		songs.forEach(function (songid) {
+			var song = model.getSongById(songid);
+			var mystring = '<div data-songid="'+song.getId()+'" class="small card collsongcard"><h1>'+song.getTitle()+'</h1></div>';
+			$('#collectionsongs').append(mystring);
+		});
+
+		$('.collsongcard').draggable({ helper: "clone", revert: "invalid", containment: "document" });
+	}
 }
 
 function getSearchResults() {
